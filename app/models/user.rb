@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :passed_tests
-  has_many :test, through: :passed_tests
+  has_many :tests, through: :passed_tests
 
   def sort_tests_by(level)
     tests.where(level: level)

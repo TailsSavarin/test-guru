@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-categories = Category.create!([{ title: 'Backend' }, { title: 'Frontend' }, { title: Database }])
+categories = Category.create!([{ title: 'Backend' }, { title: 'Frontend' }, { title: 'Database' }])
 
 tests = Test.create!([
   { category_id: categories[0].id, title: 'Ruby', level: 3 },
-  { category_id: categories[1].id, title: 'React', level: 3 },
-  { category_id: categories[2].id, title: 'Postgresql', level: 3 }
+  { category_id: categories[1].id, title: 'React', level: 1 },
+  { category_id: categories[2].id, title: 'Postgresql', level: 2 }
 ])
 
 questions = Question.create!([
@@ -21,11 +21,11 @@ questions = Question.create!([
 ])
 
 answers = Answer.create!([
-  { question_id: questions[0], body: 'Yes', correct: true },
-  { question_id: questions[0], body: 'No', correct: false},
-  { question_id: questions[1], body: 'componentDidMount', correct: true },
-  { question_id: questions[2], body: 'int', correct: true },
-  { question_id: questions[2], body: 'int4', correct: true }
+  { question_id: questions[0].id, body: 'Yes', correct: true },
+  { question_id: questions[0].id, body: 'No', correct: false},
+  { question_id: questions[1].id, body: 'componentDidMount', correct: true },
+  { question_id: questions[2].id, body: 'int', correct: true },
+  { question_id: questions[2].id, body: 'int4', correct: true }
 ])
 
 users = User.create!([{ name: 'Tom' }, { name: 'Sam' }, { name: 'Ted' }])
