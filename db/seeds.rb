@@ -9,9 +9,9 @@
 categories = Category.create!([{ title: 'Backend' }, { title: 'Frontend' }, { title: 'Database' }])
 
 tests = Test.create!([
-  { category_id: categories[0].id, title: 'Ruby', level: 3 },
-  { category_id: categories[1].id, title: 'React', level: 1 },
-  { category_id: categories[2].id, title: 'Postgresql', level: 2 }
+  { category_id: categories[0].id, title: 'Ruby', level: 3, user_id: users[0].id },
+  { category_id: categories[1].id, title: 'React', level: 1, user_id: users[1].id },
+  { category_id: categories[2].id, title: 'Postgresql', level: 2, user_id: users[2].id }
 ])
 
 questions = Question.create!([
