@@ -10,6 +10,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_count_answers
-    errors.add(:answers_maximum, 'Four answers is the maximum') if question.answers.count >= 4
+    errors.add(:answers_maximum, 'four answers is the maximum') if question.answers.count >= 4
   end
 end
