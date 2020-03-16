@@ -28,7 +28,11 @@ answers = Answer.create!([
   { question_id: questions[2].id, body: 'int4', correct: true }
 ])
 
-users = User.create!([{ name: 'Tom' }, { name: 'Sam' }, { name: 'Ted' }])
+users = User.create!([
+  { name: 'Tom', email: 'test1@lol.com' }, 
+  { name: 'Sam', email: 'test2@lol.com' }, 
+  { name: 'Ted', email: 'test3@lol.com' }
+])
 
 passed_tests = PassedTest.create!([
   { user_id: users[0].id, test_id: tests[0].id },
