@@ -5,7 +5,12 @@ class Test < ApplicationRecord
   has_many :passed_tests
   has_many :users, through: :passed_tests
 
-  def self.sort_tests_by(category_title)
-    joins(:category).where(categories: { title: category_title }).order(title: :desc).pluck(:title)
+  scope :easy, -> { where(level: 0..1) }
+  scope :normal, -> { where(level: 2..3) }
+  scope :hard, -> { where(level: 4..Float::INFINITY) }
+  scope :by_category_title, -> (category_title) { joins(:category).where(categories: { title: category_title })
+
+  def self.sort_by(category_title)
+    by_category_title(category_title).order(title: :desc).pluck(:title)
   end
 end
