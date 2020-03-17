@@ -14,6 +14,8 @@ class Test < ApplicationRecord
   scope :normal, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
 
+  scope :by_level, -> (level) { where(level: level) }
+
   scope :by_category_title, -> (category_title) { joins(:category).where(categories: { title: category_title }) }
 
   def self.sort_by(category_title)
