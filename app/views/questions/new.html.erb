@@ -1,0 +1,13 @@
+<h1>New question</h1>
+
+<%= form_with model: [@test, @question], local: true do |form| %>
+
+  <p>
+    <%= form.label "Question's body" %>
+    <%= form.text_field :body, id: 'question[body]' %>
+  </p>
+
+  <p>
+  <%= form.submit %>
+  </p>
+<% end %> 
