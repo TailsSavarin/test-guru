@@ -1,0 +1,21 @@
+<h1>Questions list</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test_id<th>
+      <th>Questions</th>
+      <th></th>
+    </tr>
+  </thead>
+
+    <% @questions.do |question| %>
+      <tr>
+        <td><%= question.test_id %></td>
+        <td><%= question.body %></td>
+        <td><%= link_to 'Destroy', question,
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></td>
+      <tr>
+    <% end %>
+</table>
