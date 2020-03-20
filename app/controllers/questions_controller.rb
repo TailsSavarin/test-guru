@@ -15,8 +15,13 @@ class QuestionsController < ApplicationController
   end
   
   def create
-    @questions = @test.questions.new(question_params)
-    render plain: 'Question created'
+    @question = @test.questions.new(question_params)
+
+    if @question.save
+      redirect_to @question
+    else
+      render 'new'
+    end
   end
 
   def destroy
