@@ -1,6 +1,5 @@
 class TestsController < ApplicationController
   before_action :find_test, only: %i[show destroy]
-  before_action :find_questions, only: %i[show destroy]
 
   def index
   end
