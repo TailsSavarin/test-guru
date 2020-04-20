@@ -1,10 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index new create]
-  before_action :find_question, only: %i[show edit update destroy]
-
-  def index
-    @questions = @test.questions
-  end
+  before_action :set_test, only: %i[index new create]
+  before_action :set_question, only: %i[show edit update destroy]
 
   def show  
   end
@@ -40,11 +36,11 @@ class QuestionsController < ApplicationController
 
   private
 
-  def find_test
+  def set_test
     @test = Test.find(params[:test_id])
   end
 
-  def find_question
+  def set_question
     @question = Question.find(params[:id])
   end
 

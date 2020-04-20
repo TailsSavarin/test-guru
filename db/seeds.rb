@@ -33,9 +33,3 @@ answers = Answer.create!([
   { question_id: questions[2].id, body: 'int', correct: true },
   { question_id: questions[2].id, body: 'int4', correct: true }
 ])
-
-passed_tests = PassedTest.create!([
-  { user_id: users[0].id, test_id: tests[0].id },
-  { user_id: users[1].id, test_id: tests[1].id },
-  { user_id: users[2].id, test_id: tests[2].id }
-])
