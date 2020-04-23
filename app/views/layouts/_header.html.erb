@@ -1,0 +1,17 @@
+<header class="navbar">
+  <div class="container">
+    <%= link_to 'TestGuru', root_path, id: "logo" %>
+    <nav>
+      <ul class="nav">
+      <% if logged_in? %>
+        <li><%= link_to 'Logout', logout_path %></li>
+        <p class="nav user"><b>Welcome Guru!</b><br>Your current profile: <%= current_user.name %></p> 
+      <% else %>
+        <li><%= link_to 'Sign Up', signup_path %></li>
+        <li><%= link_to 'Login', login_path %></li>
+      <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+
