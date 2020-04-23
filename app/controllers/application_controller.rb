@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      cookies[:target_url] = request.fullpath
+      cookies[:target_url] = request.url
       redirect_to login_path, alert: 'Please Sign in'
     end
   end
