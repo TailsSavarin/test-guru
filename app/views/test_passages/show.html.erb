@@ -1,8 +1,8 @@
-<h1><%= @test_passage.test.title %> Test</h1>
-<h2>Question number <%= @test_passage.current_question_number %> from <%= @test_passage.test.questions.size %></h2>
+<h2><%= @test_passage.test.title %> Test</h2>
+<h3>Question number <%= @test_passage.current_question_number %> from <%= @test_passage.test.questions.size %></h3>
 
-<b>
+<p>
   <%= @test_passage.current_question.body %>
-</b>
+</p>
 
-<%= render 'form' %>
+<%= render "form" %>

@@ -1,0 +1,12 @@
+<%= form_with model: [:admin, @test, @question], local: true do |f| %>
+  <%= render "shared/errors", resource: @question %>
+
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_field :body, id: :question_body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "New Question" %>
+  </div>
+<% end %> 

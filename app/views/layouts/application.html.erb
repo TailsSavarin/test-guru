@@ -10,9 +10,10 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <%= render "layouts/nav" %>
+    <%= render "shared/flash" %>
 
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

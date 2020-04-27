@@ -1,0 +1,36 @@
+<h1>Test number <%= @test.id %></h1>
+
+<p>
+  <strong>Category - </strong>
+  <%= @test.category.title%>
+</p>
+
+<p>
+  <strong>Title - </strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Level - </strong>
+  <%= @test.level %>
+</p>
+
+<p>
+  <strong>Author - </strong>
+  <%= @test.author.first_name%>
+</p>
+
+<p><%= link_to "Edit", edit_admin_test_path(@test) %><p>
+
+<table>
+  <tr>
+    <th>Questions</th>
+    <th colspan=3>Actions</th>
+  </tr>
+
+  <%= render @test.questions %><br>
+</table>
+
+<p><%= link_to "New Question", new_admin_test_question_path(@test) %></p>
+<p><%= link_to "Back", admin_tests_path %></p>
+

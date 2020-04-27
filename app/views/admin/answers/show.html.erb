@@ -1,0 +1,17 @@
+<h2>Question</h2>
+
+<p><%= @answer.question.body %></p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @answer.body %>
+</p>
+
+<p><%= link_to "Edit", edit_admin_answer_path(@answer) %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= answer_status(@answer) %>
+</p>
+
+<p><%= link_to "Back", admin_question_path(@answer.question) %></p>
