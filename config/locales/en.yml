@@ -55,6 +55,7 @@ en:
     show:
       header: "%{title} test"
       question_numbers: "Questions number %{first} from %{second}" 
+      next: "Next"
 
   tests:
     index:
