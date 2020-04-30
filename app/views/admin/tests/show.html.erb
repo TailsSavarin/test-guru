@@ -1,36 +1,34 @@
-<h1>Test number <%= @test.id %></h1>
+<h1><%= t('.header') %></h1>
 
 <p>
-  <strong>Category - </strong>
+ <strong><%= t('.category') %></strong>
   <%= @test.category.title%>
 </p>
 
 <p>
-  <strong>Title - </strong>
+  <strong><%= t('.title') %></strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level - </strong>
+  <strong><%= t('.level') %></strong>
   <%= @test.level %>
 </p>
 
 <p>
-  <strong>Author - </strong>
+  <strong><%= t('.author') %></strong>
   <%= @test.author.first_name%>
 </p>
 
-<p><%= link_to "Edit", edit_admin_test_path(@test) %><p>
+<p>
+  <strong><%= t('.questions') %></strong>
+  <ol><%= render @test.questions %></ol>
+</p>
 
-<table>
-  <tr>
-    <th>Questions</th>
-    <th colspan=3>Actions</th>
-  </tr>
+<p>
+  <%= link_to t('.edit'), edit_admin_test_path(@test) %> |
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+</p>
 
-  <%= render @test.questions %><br>
-</table>
-
-<p><%= link_to "New Question", new_admin_test_question_path(@test) %></p>
-<p><%= link_to "Back", admin_tests_path %></p>
+<p><%= link_to t('.back'), admin_tests_path %></p>
 

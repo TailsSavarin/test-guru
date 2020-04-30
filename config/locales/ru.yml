@@ -1,0 +1,180 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    select:
+      prompt: "Выберете"
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
+    label:
+      user:
+        email: "Почта"
+        first_name: "Имя"
+        last_name: "Фамилия"
+      test:
+        category_id: "Категория:"
+        title: "Название:"
+        level: "Уровень:"
+      question:
+        body: "Суть вопроса:"
+      answer: 
+        body: "Суть ответа:"
+        correct: "Правильный:"
+
+  layouts:
+    nav:
+      testguru_welcome: "TestGuru Коллекция Тестов"
+      admin: "Статус администратора:"
+      profile: "Текущий профиль: %{email}"
+      logout: "Выйти"
+      testguru_logo: "Добро пожаловать на TestGuru"
+      sign_up: "Зарегистрироваться"
+      login: "Войти"
+      login_time: "время входа:"
+
+  devise:
+    sessions: 
+      create: 
+        after_sign_in_greeting: "Привет, %{name}! Желаем вам хорошего дня!"
+
+  test_passages:
+    result:
+      header: "%{title} тест завершен"
+      test_pass_succes: "Поздравляем, вы успешно прошли тест!"
+      test_pass_fail: "К сожалению, вы не прошли тест"
+      percent: "Процент правильных ответов составляет:"
+      back: "К списку тестов"  
+    show:
+      header: "%{title} тест"
+      question_numbers: "Вопрос %{first} из %{second}" 
+
+  tests:
+    index:
+      header: "Список Тестов"
+      category: "Категория"
+      title: "Название"
+      level: "Уровень"
+      author: "Автор"
+      questions: "Вопросы"
+      actions: "Действия"
+    test: 
+      start: "НАЧАТЬ"
+    start:
+      after_start_greeting: "Удачи! Вы начали проходить тест!"
+
+  admin:
+    nav:
+      title: "TestGuru | Панель Администратора"
+      admin: "Статус администратора:"
+      login_time: "время входа:"
+      profile: "Текущий профиль: %{email}" 
+      logout: "Выйти"
+    answers:
+      edit:
+        header: "Изменить Ответ"
+        body: "Суть вопроса:"
+        back: "Назад"
+      new:
+        header: "Создать новый ответ:"
+        back: "Назад"
+      show:
+        header: "Информация о ответе:"
+        answer: "Ответ:"
+        edit: "Изменить"
+        status: "Состояние:"
+        back: "Назад"
+      answer:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      create: 
+        success: "Ответ был успешно создан!"
+      update: 
+        success: "Ответ был успешно обновлен!"
+      destroy: 
+        success: "Ответ был успешно обновлен!"
+    questions:
+      edit:
+        header: "Изменить Вопрос"
+        back: "Назад"
+      new:
+        header: "Создать новый вопрос:"
+        back: "Назад"
+      show:
+        header: "Информация о вопросе:"
+        body: "Суть вопроса:"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+        answers: "Ответы:"
+        new_answer: "Новый ответ"
+        back: "Назад"
+      question:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      create: 
+        success: "Вопрос был успешно создан!"
+      update: 
+        success: "Вопрос был успешно обновлен!"
+      destroy: 
+        success: "Вопрос был успешно удален!"
+    tests:
+      edit:
+        header: "Изменить %{title} Тест"
+        back: "Назад"
+      index:
+        header: "Список Тестов"
+        category: "Категория"
+        title: "Название"
+        level: "Уровень"
+        author: "Автор"
+        questions: "Вопросы"
+        actions: "Действия"
+        new_test: "Новый Тест"
+      new: 
+        header: "Создать новый тест:"
+        back: "Назад"
+      show:
+        header: "Информация о тесте:"
+        category: "Категория:"
+        title: "Название:"
+        level: "Уровень:"
+        author: "Автор:"
+        questions: "Вопросы:"
+        edit: "Изменить"
+        new_question: "Новый вопрос"
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      create: 
+        success: "Тест был успешно создан!"
+      update: 
+        success: "Тест был успешно обновлен!"
+      destroy: 
+        success: "Тест был успешно удален!"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы только что завершили TestGuru Тест!"    
+
+  shared:
+    errors:
+      header:
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"

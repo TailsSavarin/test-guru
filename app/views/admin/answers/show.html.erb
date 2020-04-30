@@ -1,17 +1,18 @@
-<h2>Question</h2>
+<h1><%= t('.header') %></h1>
 
-<p><%= @answer.question.body %></p>
+<h3><%= @answer.question.body %></h3>
 
 <p>
-  <strong>Answer:</strong>
+  <strong><%= t('.answer') %></strong>
   <%= @answer.body %>
 </p>
 
-<p><%= link_to "Edit", edit_admin_answer_path(@answer) %></p>
-
 <p>
-  <strong>Status:</strong>
+  <strong><%= t('.status') %></strong>
   <%= answer_status(@answer) %>
 </p>
 
-<p><%= link_to "Back", admin_question_path(@answer.question) %></p>
+<p>
+  <%= link_to t('.edit'), edit_admin_answer_path(@answer) %> |
+  <%= link_to t('.back'), admin_question_path(@answer.question) %>
+</p>

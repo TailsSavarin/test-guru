@@ -1,19 +1,23 @@
 <% if user_signed_in? %>
   <div class="nav nav-user">
-    <span class="nav-user title"><%= link_to "TestGuru", root_path %></span>
+    <span class="nav-user title"><%= link_to t('.testguru_welcome'), root_path %></span>
 
     <div class="nav-user user">
-      Welcome, <b class="nav-user user-email"><%= current_user.email %></b> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= t('.admin') %>
+      <%= admin_status %> |
+      <%= t('.login_time') %>
+      <%= current_time %> |
+      <%= t('.profile', email: current_user.email) %> |
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     </div>
   </div>
 <% else %>
   <div class="nav nav-user">
-    <span class="nav-user title">Welcome to the TestGuru!</span>
+    <span class="nav-user title"><%= t('.testguru_logo') %></span>
 
     <div class="nav-user user">
-      <%= link_to "Sign Up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
+      <%= link_to t('.login'), new_user_session_path %> |
+      <%= link_to t('.sign_up'), new_user_registration_path %> 
     </div>
   </div>
 <% end %>
