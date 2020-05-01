@@ -35,10 +35,9 @@ en:
       admin: "Admin status:"
       profile: "Current profile: %{email}"
       logout: "Logout"
-      testguru_logo: "Welcome to the TestGuru"
       sign_up: "Sign up"
       login: "Login"
-      login_time: "login time:"
+      login_time: "last login time:"
 
   devise:
     sessions: 
@@ -64,8 +63,8 @@ en:
       title: "Title"
       level: "Level"
       author: "Author"
-      questions: "Questions"
       actions: "Actions"
+      questions: "Questions"
     test: 
       start: "START"
     start:
@@ -75,7 +74,7 @@ en:
     nav:
       title: "TestGuru | Admin Panel"
       admin: "Admin status:"
-      login_time: "login time:"
+      login_time: "last login time:"
       profile: "Current profile: %{email}" 
       logout: "Logout"
     answers:
@@ -87,6 +86,8 @@ en:
         header: "Create a new answer:"
         back: "Back"
       show:
+        correct_answer: "Correct answer"
+        wrong_answer: "Wrong answer"
         header: "Answer information:"
         answer: "Answer:"
         edit: "Edit"
@@ -111,6 +112,7 @@ en:
         header: "Create a new question:"
         back: "Back"
       show:
+        actions: "Actions"
         header: "Question information:"
         body: "Body:"
         edit: "Edit"
@@ -147,6 +149,7 @@ en:
         header: "Create a new test:"
         back: "Back"
       show:
+        actions: "Actions"
         header: "Test information:"
         category: "Category:"
         title: "Title:"

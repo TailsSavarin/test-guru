@@ -1,5 +1,5 @@
-<h2><%= t('.header') %></h2>
+<h1><%= t('.header') %></h1>
 
 <%= render "form" %>
 
-<p><%= link_to t('.back'), admin_test_path(@question.test) %></p>
+<p><%= link_to t('.back'), admin_test_path(@question.test), class: 'btn btn-secondary btn-sm' %></p>

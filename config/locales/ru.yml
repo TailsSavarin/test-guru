@@ -35,10 +35,9 @@ ru:
       admin: "Статус администратора:"
       profile: "Текущий профиль: %{email}"
       logout: "Выйти"
-      testguru_logo: "Добро пожаловать на TestGuru"
       sign_up: "Зарегистрироваться"
       login: "Войти"
-      login_time: "время входа:"
+      login_time: "последнее время входа:"
 
   devise:
     sessions: 
@@ -55,6 +54,7 @@ ru:
     show:
       header: "%{title} тест"
       question_numbers: "Вопрос %{first} из %{second}" 
+      next: "Следующий вопрос"
 
   tests:
     index:
@@ -74,7 +74,7 @@ ru:
     nav:
       title: "TestGuru | Панель Администратора"
       admin: "Статус администратора:"
-      login_time: "время входа:"
+      login_time: "последнее время входа:"
       profile: "Текущий профиль: %{email}" 
       logout: "Выйти"
     answers:
@@ -86,6 +86,8 @@ ru:
         header: "Создать новый ответ:"
         back: "Назад"
       show:
+        correct_answer: "Верный ответ"
+        wrong_answer: "Неверный ответ"
         header: "Информация о ответе:"
         answer: "Ответ:"
         edit: "Изменить"
@@ -110,6 +112,7 @@ ru:
         header: "Создать новый вопрос:"
         back: "Назад"
       show:
+        actions: "Действия"
         header: "Информация о вопросе:"
         body: "Суть вопроса:"
         edit: "Изменить"
@@ -146,6 +149,7 @@ ru:
         header: "Создать новый тест:"
         back: "Назад"
       show:
+        actions: "Действия"
         header: "Информация о тесте:"
         category: "Категория:"
         title: "Название:"

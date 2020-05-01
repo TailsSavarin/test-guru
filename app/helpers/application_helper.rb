@@ -16,11 +16,10 @@ module ApplicationHelper
   end
 
   def admin_status
-    color = current_user.admin? ? 'lime' : 'lightslategray'
-    if color == 'lime'
-      "<span style='color: #{color}'>#{format('ON')}</span>".html_safe
+    if color = current_user.admin? 
+      'ON'
     else
-      "<span style='color: #{color}'>#{format('OFF')}</span>".html_safe
+      'OFF'
     end
   end
 end

@@ -9,7 +9,6 @@ module TestPassagesHelper
   
   def colored_result(test_passage)
     color = test_passage.success? ? 'lime' : 'firebrick'
-    "<span style='color: #{color}'>
-    #{format('%d', test_passage.success_percent)}</span>".html_safe
+    "<span style='color: #{color}'>#{number_to_percentage(test_passage.success_percent, precision: 0)}</span>".html_safe
   end
 end

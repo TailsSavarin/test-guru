@@ -20,15 +20,22 @@
   <%= @test.author.first_name%>
 </p>
 
-<p>
-  <strong><%= t('.questions') %></strong>
-  <ol><%= render @test.questions %></ol>
-</p>
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col"><%= t('.questions') %></th>
+      <th scope="col"><%= t('.actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @test.questions %>
+  </tbody>
+</table>
+
+<p><%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-info' %></p>
 
 <p>
-  <%= link_to t('.edit'), edit_admin_test_path(@test) %> |
-  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+  <%= link_to t('.edit'), edit_admin_test_path(@test), class: 'btn btn-primary btn-sm active' %> 
+  <%= link_to t('.back'), admin_tests_path, class: 'btn btn-secondary btn-sm active' %>
 </p>
-
-<p><%= link_to t('.back'), admin_tests_path %></p>
 
