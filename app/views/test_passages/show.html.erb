@@ -1,8 +1,9 @@
-<h2><%= t('.header', title: @test_passage.test.title) %></h2>
-<h3><%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %></h3>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<p><%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %><p>
 
-<p>
-  <%= @test_passage.current_question.body %>
-</p>
-
-<%= render "form" %>
+<div class="card border-primary">
+  <div class="card-body">
+    <p><strong><%= @test_passage.current_question.body %></strong></p>
+    <%= render "form" %>
+  </div>
+</div>

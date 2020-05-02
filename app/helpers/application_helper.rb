@@ -14,13 +14,4 @@ module ApplicationHelper
   def current_time
     I18n.l(Time.current, format: :short)
   end
-
-  def admin_status
-    color = current_user.admin? ? 'lime' : 'lightslategray'
-    if color == 'lime'
-      "<span style='color: #{color}'>#{format('ON')}</span>".html_safe
-    else
-      "<span style='color: #{color}'>#{format('OFF')}</span>".html_safe
-    end
-  end
 end

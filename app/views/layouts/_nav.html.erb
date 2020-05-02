@@ -1,23 +1,19 @@
-<% if user_signed_in? %>
-  <div class="nav nav-user">
-    <span class="nav-user title"><%= link_to t('.testguru_welcome'), root_path %></span>
+<nav class="navbar navbar-dark bg-dark">
+  <%= link_to t('.testguru_welcome'), root_path, class: 'navbar-brand' %>
 
-    <div class="nav-user user">
-      <%= t('.admin') %>
-      <%= admin_status %> |
+  <span class="navbar-text">
+    <% if current_user&.admin? %>
+      <%= link_to t('.admin'), admin_tests_path %> |
+    <% end %> 
+
+    <% if user_signed_in? %>
       <%= t('.login_time') %>
       <%= current_time %> |
       <%= t('.profile', email: current_user.email) %> |
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-    </div>
-  </div>
-<% else %>
-  <div class="nav nav-user">
-    <span class="nav-user title"><%= t('.testguru_logo') %></span>
-
-    <div class="nav-user user">
+    <% else %>
       <%= link_to t('.login'), new_user_session_path %> |
       <%= link_to t('.sign_up'), new_user_registration_path %> 
-    </div>
-  </div>
-<% end %>
+    <% end %>
+  </span>
+</nav>

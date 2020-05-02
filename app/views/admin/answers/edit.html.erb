@@ -1,4 +1,4 @@
-<h2><%= t('.header') %></h2>
+<h1><%= t('.header') %></h1>
 
 <p>
   <strong><%= t('.body') %></strong>
@@ -7,4 +7,4 @@
 
 <%= render "form" %>
 
-<p><%= link_to t('.back'), admin_question_path(@answer.question) %></p>
+<p><%= link_to t('.back'), admin_question_path(@answer.question), class: "btn btn-secondary btn-sm" %></p>

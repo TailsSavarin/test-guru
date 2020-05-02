@@ -1,6 +1,6 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
   <h2><%= test_complete_message(@test_passage) %></h2> 
-  <h4><%= t('.percent') %><%= colored_result(@test_passage) %>%</h4>
+  <h4><%= t('.percent') %><%= colored_result(@test_passage) %></h4>
 
-<%= link_to t('.back'), tests_path %>
+<%= link_to t('.back'), tests_path, class: 'btn btn-primary mt-3' %>

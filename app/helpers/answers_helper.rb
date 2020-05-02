@@ -1,9 +1,9 @@
 module AnswersHelper
   def answer_status(answer)
     if answer.correct
-      'Correct Answer'
+      t('.correct_answer')
     else
-      'Invalid Answer'
+      t('.wrong_answer')
     end
   end
 end

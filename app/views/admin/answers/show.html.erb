@@ -13,6 +13,6 @@
 </p>
 
 <p>
-  <%= link_to t('.edit'), edit_admin_answer_path(@answer) %> |
-  <%= link_to t('.back'), admin_question_path(@answer.question) %>
+  <%= link_to t('.edit'), edit_admin_answer_path(@answer), class: 'btn btn-primary btn-sm active' %>
+  <%= link_to t('.back'), admin_question_path(@answer.question), class: 'btn btn-secondary btn-sm active' %>
 </p>
