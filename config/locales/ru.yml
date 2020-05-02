@@ -31,13 +31,13 @@ ru:
 
   layouts:
     nav:
-      testguru_welcome: "TestGuru Коллекция Тестов"
-      admin: "Статус администратора:"
+      admin: "Панель Администратора"
+      testguru_welcome: "TestGuru | Коллекция Тестов"
       profile: "Текущий профиль: %{email}"
       logout: "Выйти"
       sign_up: "Зарегистрироваться"
       login: "Войти"
-      login_time: "последнее время входа:"
+      login_time: "Последнее время входа:"
 
   devise:
     sessions: 
@@ -72,9 +72,9 @@ ru:
 
   admin:
     nav:
-      title: "TestGuru | Панель Администратора"
-      admin: "Статус администратора:"
-      login_time: "последнее время входа:"
+      title: "TestGuru | Коллекция Тестов"
+      admin: "Панель Администратора"
+      login_time: "Последнее время входа:"
       profile: "Текущий профиль: %{email}" 
       logout: "Выйти"
     answers:

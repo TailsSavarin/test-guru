@@ -14,12 +14,4 @@ module ApplicationHelper
   def current_time
     I18n.l(Time.current, format: :short)
   end
-
-  def admin_status
-    if color = current_user.admin? 
-      'ON'
-    else
-      'OFF'
-    end
-  end
 end

@@ -2,8 +2,7 @@
   <%= link_to t('.title'), root_path, class: 'navbar-brand' %>
 
   <span class="navbar-text">
-    <%= t('.admin') %>
-    <%= link_to admin_status, admin_tests_path %> |
+    <%= link_to t('.admin'), admin_tests_path %> |
     <%= t('.login_time') %>
     <%= current_time %> |
     <%= t('.profile', email: current_user.email) %> |

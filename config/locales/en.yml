@@ -31,13 +31,13 @@ en:
 
   layouts:
     nav:
-      testguru_welcome: "TestGuru Test Collection"
-      admin: "Admin status:"
+      admin: "Admin Panel"
+      testguru_welcome: "TestGuru | Test Collection"
       profile: "Current profile: %{email}"
       logout: "Logout"
       sign_up: "Sign up"
       login: "Login"
-      login_time: "last login time:"
+      login_time: "Last login time:"
 
   devise:
     sessions: 
@@ -72,9 +72,9 @@ en:
 
   admin:
     nav:
-      title: "TestGuru | Admin Panel"
-      admin: "Admin status:"
-      login_time: "last login time:"
+      title: "TestGuru | Test Collection"
+      admin: "Admin Panel"
+      login_time: "Last login time:"
       profile: "Current profile: %{email}" 
       logout: "Logout"
     answers:
