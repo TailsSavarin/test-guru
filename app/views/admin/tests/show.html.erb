@@ -23,8 +23,8 @@
 <table class="table table-borderless">
   <thead>
     <tr>
-      <th scope="col"><%= t('.questions') %></th>
-      <th scope="col"><%= t('.actions') %></th>
+      <th><%= t('.questions') %></th>
+      <th><%= t('.actions') %></th>
     </tr>
   </thead>
   <tbody>
@@ -32,7 +32,7 @@
   </tbody>
 </table>
 
-<p><%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-info' %></p>
+<p><%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-success btn-lg' %></p>
 
 <p>
   <%= link_to t('.edit'), edit_admin_test_path(@test), class: 'btn btn-primary btn-sm active' %> 
