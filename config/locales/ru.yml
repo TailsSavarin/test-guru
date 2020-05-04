@@ -51,10 +51,14 @@ ru:
       test_pass_fail: "К сожалению, вы не прошли тест"
       percent: "Процент правильных ответов составляет:"
       back: "К списку тестов"  
+    gist:
+      success: "Gist успешно создан, ссылка: %{link}"
+      failure: "Во время создания gist произошла ошибка!"
     show:
       header: "%{title} тест"
       question_numbers: "Вопрос %{first} из %{second}" 
       next: "Следующий вопрос"
+      gist_question: "Добавить вопрос в свой Gist"
 
   tests:
     index:
@@ -77,6 +81,13 @@ ru:
       login_time: "Последнее время входа:"
       profile: "Текущий профиль: %{email}" 
       logout: "Выйти"
+    gists:
+      index:
+        header: "Список Gist"
+        question: "Вопрос"
+        gist_url: "Gist адрес"
+        user: "Почта пользователя"
+        back: "Назад к тестам"
     answers:
       edit:
         header: "Изменить Ответ"
@@ -137,6 +148,7 @@ ru:
         header: "Изменить %{title} Тест"
         back: "Назад"
       index:
+        gists: "Список Gist"
         header: "Список Тестов"
         category: "Категория"
         title: "Название"
@@ -174,6 +186,9 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы только что завершили TestGuru Тест!"    
+
+  gist_question_service:
+    description: "Вопрос с сайта TestGuru по теме %{title}"
 
   shared:
     errors:

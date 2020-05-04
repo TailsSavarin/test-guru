@@ -51,10 +51,14 @@ en:
       test_pass_fail: "Sorry, you did not pass the test!"
       percent: "The percentage of currect answers was:"
       back: "To the test list"  
+    gist:
+      success: "Gist was successfully created, link: %{link}"
+      failure: "An error occurred while saving gist"
     show:
       header: "%{title} test"
       question_numbers: "Questions number %{first} from %{second}" 
       next: "Next"
+      gist_question: "Add question in your Gist"
 
   tests:
     index:
@@ -77,6 +81,13 @@ en:
       login_time: "Last login time:"
       profile: "Current profile: %{email}" 
       logout: "Logout"
+    gists:
+      index:
+        header: "Gist List"
+        question: "Question"
+        gist_url: "Gist URL"
+        user: "User email"
+        back: "Back to tests"
     answers:
       edit:
         header: "Edit Answer"
@@ -137,6 +148,7 @@ en:
         header: "Edit %{title} Test"
         back: "Back"
       index:
+        gists: "Gist List"
         header: "Test List"
         category: "Category"
         title: "Title"
@@ -174,6 +186,9 @@ en:
   test_mailer:
     completed_test:
       subject: "You just completed the TestGuru Test!"    
+
+  gist_question_service:
+    description: "Question from the site TestGuru on the topic %{title}"
 
   shared:
     errors:

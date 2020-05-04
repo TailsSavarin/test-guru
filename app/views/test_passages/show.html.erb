@@ -4,6 +4,9 @@
 <div class="card border-primary">
   <div class="card-body">
     <p><strong><%= @test_passage.current_question.body %></strong></p>
+    
     <%= render "form" %>
+
+    <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-outline-info mt-3' %></p>
   </div>
 </div>
