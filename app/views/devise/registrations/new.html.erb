@@ -35,6 +35,14 @@
             <p>
               <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "new-password" %>
+                <%= octicon 'shield-check', height: 24, class: 'text-success hide' %>
+                <%= octicon 'shield-x', height: 24, class: 'text-danger hide' %>
+                <small class="text-success hide">
+                  <%= t('.success_password')%>
+                </small>
+                <small class="text-danger hide">
+                  <%= t('.failure_password') %>
+                </small>
             </p>
 
             <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>

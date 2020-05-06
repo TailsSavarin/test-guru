@@ -40,6 +40,11 @@ ru:
       login_time: "Последнее время входа:"
 
   devise:
+    registrations:
+      new:
+        success_password: "Пароли совпадают"
+        failure_password: "Пароли не совпадают"
+
     sessions: 
       create: 
         after_sign_in_greeting: "Привет, %{name}! Желаем вам хорошего дня!"
