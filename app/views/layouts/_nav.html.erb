@@ -7,9 +7,12 @@
     <% end %> 
 
     <% if user_signed_in? %>
+      <%= octicon 'clock' %>
       <%= t('.login_time') %>
       <%= current_time %> |
+      <%= octicon 'person' %>
       <%= t('.profile', email: current_user.email) %> |
+      <%= octicon 'sign-out' %>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('.login'), new_user_session_path %> |
