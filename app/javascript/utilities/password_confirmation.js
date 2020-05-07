@@ -24,7 +24,8 @@ function confirmUserPassword() {
 
     this.classList.remove('border-danger')
     this.classList.remove('border-success')
-  } else if (password === confirmation) { 
+    return
+  } if (password === confirmation) { 
     successText.classList.remove('hide')
     failureText.classList.add('hide')
 
