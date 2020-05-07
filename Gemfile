@@ -38,6 +38,7 @@ gem 'rails-i18n', '~> 6.0.0'
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.4.1'
+gem 'octicons_helper'
 
 # NETWORK
 

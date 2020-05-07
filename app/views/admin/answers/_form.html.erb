@@ -4,14 +4,14 @@
 
     <p>
       <%= f.label :body %>
-      <%= f.text_area :body, id: :answer_body, rows: 7, cols: 60 %>
+      <%= f.text_area :body, id: :answer_body, rows: 7, cols: 60, class: 'form-control' %>
     </p>
 
     <p>
       <%= f.label :correct %>
-      <%= f.check_box :correct, id: :answer_correct %>
+      <%= f.check_box :correct, id: :answer_correct, class: 'form-check-label' %>
     </p>
 
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-success btn-lg' %>
   </div>
 <% end %> 

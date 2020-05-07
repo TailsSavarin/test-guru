@@ -40,6 +40,10 @@ en:
       login_time: "Last login time:"
 
   devise:
+    registrations:
+      new:
+        success_password: "Password match"
+        failure_password: "Password didn't match"
     sessions: 
       create: 
         after_sign_in_greeting: "Hello, %{name}! Have a nice day!"
