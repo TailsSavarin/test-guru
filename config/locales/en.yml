@@ -161,6 +161,8 @@ en:
         questions: "Questions"
         actions: "Actions"
         new_test: "New Test"
+      form_inline:
+        submit: "OK"
       new: 
         header: "Create a new test:"
         back: "Back"
@@ -197,5 +199,5 @@ en:
   shared:
     errors:
       header:
-        one: "%{count} error detected"
-        other: "%{count} errors detected"
+        one: "%{count} error detected:"
+        other: "%{count} errors detected:"
