@@ -12,7 +12,6 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
-
   def success_percent
     correct_questions.to_f/test.questions.size * 100
   end

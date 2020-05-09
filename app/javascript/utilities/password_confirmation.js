@@ -15,7 +15,7 @@ function confirmUserPassword() {
   var failureText = this.parentNode.querySelector('small.text-danger')
 
 
-  if(!password || !confirmation) {
+  if (!password || !confirmation) {
     successText.classList.add('hide')
     failureText.classList.add('hide')
 

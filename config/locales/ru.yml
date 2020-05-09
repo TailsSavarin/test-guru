@@ -162,6 +162,8 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         new_test: "Новый Тест"
+      form_inline:
+        submit: "ОК"
       new: 
         header: "Создать новый тест:"
         back: "Назад"
@@ -198,7 +200,7 @@ ru:
   shared:
     errors:
       header:
-        one: "Обнаружено %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"
-        few: "Обнаружено %{count} ошибки"
-        many: "Обнаружено %{count} ошибок"
+        one: "Обнаруженa %{count} ошибка:"
+        other: "Обнаружено %{count} ошибки:"
+        few: "Обнаружено %{count} ошибки:"
+        many: "Обнаружено %{count} ошибок:"

@@ -1,8 +1,17 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
-<p><%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %><p>
 
 <div class="card border-primary">
   <div class="card-body">
+    <p><%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %><p>
+
+    <div class="progress">
+      <%= content_tag :div,
+                      progress_bar(@test_passage),
+                      class: 'progress-bar progress-bar-striped progress-bar-animated bg-info',
+                      data: { question_number: @test_passage.current_question_number,
+                              questions_count: @test_passage.test.questions.size } %>
+    </div><br>
+
     <p><strong><%= @test_passage.current_question.body %></strong></p>
     
     <%= render "form" %>
