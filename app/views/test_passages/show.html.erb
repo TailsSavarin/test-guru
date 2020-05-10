@@ -1,8 +1,10 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h1 class="display-4 text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<div class="card border-primary">
+<div class="card border-info">
   <div class="card-body">
-    <p><%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %><p>
+    <p class="text-center">
+      <%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %>
+    <p>
 
     <div class="progress">
       <%= content_tag :div,
@@ -16,6 +18,8 @@
     
     <%= render "form" %>
 
-    <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-outline-info mt-3' %></p>
+    <p>
+      <%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-outline-info mt-3' %>
+    </p>
   </div>
 </div>

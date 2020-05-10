@@ -1,5 +1,5 @@
 <%= form_with model: [:admin, @test], local: true do |f| %>
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <%= render 'shared/errors', resource: @test %>
 
     <p>
@@ -9,7 +9,7 @@
 
     <p>
       <%= f.label :title %>
-      <%= f.text_field :title, id: :test_title, class: 'form-control' %>
+      <%= f.text_field :title, id: :test_title, class: 'form-control form-control-lg' %>
     </p>
 
     <p>

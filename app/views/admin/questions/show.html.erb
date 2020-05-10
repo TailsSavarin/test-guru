@@ -1,24 +1,27 @@
-<h1><%= t('.header') %></h1> 
+<h1 class="display-4 text-center"><%= t('.header') %></h1>
 
-<p>
-  <h3><%= t('.body') %></h3>
-  <strong><%= @question.body %></strong>
-</p>
+<div class="card border-secondary rounded">
+  <div class="card-body">
+    <p>
+      <h3><%= t('.body') %> <%= @question.body %></h3>
+    </p>
 
-<table class="table table-borderless">
-  <thead>
-    <tr>
-      <th><%= t('.answers') %></th>
-      <th><%= t('.actions') %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @question.answers %>
-  </tbody>
-</table>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t('.answers') %></th>
+          <th><%= t('.actions') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @question.answers %>
+      </tbody>
+    </table>
 
-<p><%= link_to t('.new_answer'), new_admin_question_answer_path(@question), class: 'btn btn-success btn-lg' %></p>
-<p>
-  <%= link_to t('.edit'), edit_admin_question_path(@question), class: 'btn btn-primary btn-sm active' %>
-  <%= link_to t('.back'), admin_test_path(@question.test), class: 'btn btn-secondary btn-sm active' %>
-</p>
+    <p><%= link_to t('.new_answer'), new_admin_question_answer_path(@question), class: 'btn btn-success btn-lg' %></p>
+    <p>
+      <%= link_to t('.edit'), edit_admin_question_path(@question), class: 'btn btn-primary btn-sm active' %>
+      <%= link_to t('.back'), admin_test_path(@question.test), class: 'btn btn-secondary btn-sm active' %>
+    </p>
+  </div>
+</div>

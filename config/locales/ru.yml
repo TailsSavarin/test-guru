@@ -24,9 +24,9 @@ ru:
         title: "Название:"
         level: "Уровень:"
       question:
-        body: "Суть вопроса:"
+        body: "Напишите ваш вопрос:"
       answer: 
-        body: "Суть ответа:"
+        body: "Напишите ваш ответ:"
         correct: "Правильный:"
 
   layouts:
@@ -91,20 +91,20 @@ ru:
         header: "Список Gist"
         question: "Вопрос"
         gist_url: "Gist адрес"
-        user: "Почта пользователя"
+        user: "Почта Пользователя"
         back: "Назад к тестам"
     answers:
       edit:
         header: "Изменить Ответ"
-        body: "Суть вопроса:"
+        body: "Вопрос:"
         back: "Назад"
       new:
-        header: "Создать новый ответ:"
+        header: "Новый Ответ"
         back: "Назад"
       show:
         correct_answer: "Верный ответ"
         wrong_answer: "Неверный ответ"
-        header: "Информация о ответе:"
+        header: "Информация о Ответе"
         answer: "Ответ:"
         edit: "Изменить"
         status: "Состояние:"
@@ -125,16 +125,16 @@ ru:
         header: "Изменить Вопрос"
         back: "Назад"
       new:
-        header: "Создать новый вопрос:"
+        header: "Новый Вопрос"
         back: "Назад"
       show:
         actions: "Действия"
-        header: "Информация о вопросе:"
-        body: "Суть вопроса:"
+        header: "Информация о Вопросе"
+        body: "Вопрос:"
         edit: "Изменить"
         delete: "Удалить"
         confirm: "Вы уверены?"
-        answers: "Ответы:"
+        answers: "Ответы"
         new_answer: "Новый ответ"
         back: "Назад"
       question:
@@ -165,18 +165,18 @@ ru:
       form_inline:
         submit: "ОК"
       new: 
-        header: "Создать новый тест:"
+        header: "Новый тест"
         back: "Назад"
       show:
         actions: "Действия"
-        header: "Информация о тесте:"
+        header: "Информация о Тесте"
         category: "Категория:"
         title: "Название:"
         level: "Уровень:"
         author: "Автор:"
-        questions: "Вопросы:"
+        questions: "Вопросы"
         edit: "Изменить"
-        new_question: "Новый вопрос"
+        new_question: "Новый Вопрос"
         back: "Назад"
       test:
         show: "Показать"

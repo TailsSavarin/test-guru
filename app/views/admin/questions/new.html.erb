@@ -1,5 +1,12 @@
-<h1><%= t('.header') %></h1>
+<h1 class="display-4 text-center"><%= t('.header') %></h1>
 
-<%= render "form" %>
+<div class="card border-success rounded">
+  <div class="card-body">
 
-<p><%= link_to t('.back'), admin_test_path(@question.test), class: 'btn btn-secondary btn-sm' %></p>
+    <%= render "form" %>
+
+    <p>
+      <%= link_to t('.back'), admin_test_path(@question.test), class: "btn btn-secondary btn-sm float-right" %>
+    </p>
+  </div>
+</div>

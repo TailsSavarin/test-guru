@@ -1,12 +1,12 @@
 <%= form_with model: [:admin, @test, @question], local: true do |f| %>
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <%= render "shared/errors", resource: @question %>
 
     <p>
-      <%= f.label :body %>
-      <%= f.text_field :body, id: :question_body, class: 'form-control' %>
+      <h3><%= f.label :body %></h3>
+      <%= f.text_field :body, id: :question_body, class: 'form-control form-control-lg' %>
     </p>
-
-      <%= f.submit class: 'btn btn-success btn-lg' %>
+     
+    <%= f.submit class: 'btn btn-success btn-lg' %>
   </div>
 <% end %> 

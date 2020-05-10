@@ -2,7 +2,10 @@
   <% bs_class = key == 'alert' ? 'danger' : 'primary' %>
 
   <div class="alert alert-<%= bs_class %> alert-dismissible fade show mt-3" role="alert">
-    <%= message %>
+    <strong><%= message %></strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <% end %>
 
