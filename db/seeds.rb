@@ -6,30 +6,3 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create!([
-  { name: 'Tom', email: 'test1@lol.com' }, 
-  { name: 'Sam', email: 'test2@lol.com' }, 
-  { name: 'Ted', email: 'test3@lol.com' }
-])
-
-categories = Category.create!([{ title: 'Backend' }, { title: 'Frontend' }, { title: 'Database' }])
-
-tests = Test.create!([
-  { category_id: categories[0].id, title: 'Ruby', level: 3, user_id: users[0].id },
-  { category_id: categories[1].id, title: 'React', level: 1, user_id: users[1].id },
-  { category_id: categories[2].id, title: 'Postgresql', level: 2, user_id: users[2].id }
-])
-
-questions = Question.create!([
-  { test_id: tests[0].id, body: 'Ruby is agile language?' },
-  { test_id: tests[1].id, body: 'At what point in the life cycle do you apply AJAX?' },
-  { test_id: tests[2].id, body: 'Alias for data type: integer?' }
-])
-
-answers = Answer.create!([
-  { question_id: questions[0].id, body: 'Yes', correct: true },
-  { question_id: questions[0].id, body: 'No', correct: false},
-  { question_id: questions[1].id, body: 'componentDidMount', correct: true },
-  { question_id: questions[2].id, body: 'int', correct: true },
-  { question_id: questions[2].id, body: 'int4', correct: true }
-])
