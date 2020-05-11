@@ -8,21 +8,19 @@
   <td class="align-middle"><%= test.author.first_name %></td>
   <td class="align-middle"><%= questions_count(test) %></td>
   <td class="align-middle">
-    <%= link_to t('.show'),
-                admin_test_path(test),
-                class: 'btn btn-outline-secondary' %>
-  </td>
-  <td class="align-middle">
-    <%= link_to t('.edit'),
-                edit_admin_test_path(test),
-                data: { test_id: test.id },
-                class: 'btn btn-outline-secondary form-inline-link' %>
-  </td>
-  <td class="align-middle">
-    <%= link_to t('.delete'),
-                admin_test_path(test),
-                method: :delete,
-                data: { confirm: t('.confirm') },
-                class: 'btn btn-outline-secondary' %>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <%= link_to t('.show'),
+                  admin_test_path(test),
+                  class: 'btn btn-outline-secondary' %>
+      <%= link_to t('.edit'),
+                  edit_admin_test_path(test),
+                  data: { test_id: test.id },
+                  class: 'btn btn-outline-secondary form-inline-link' %>
+      <%= link_to t('.delete'),
+                  admin_test_path(test),
+                  method: :delete,
+                  data: { confirm: t('.confirm') },
+                  class: 'btn btn-outline-secondary' %>
+    </div>
   </td>
 </tr>

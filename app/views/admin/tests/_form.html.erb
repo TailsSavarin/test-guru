@@ -1,5 +1,5 @@
 <%= form_with model: [:admin, @test], local: true do |f| %>
-  <div class="form-group">
+  <div class="form-group col-md-8">
     <%= render 'shared/errors', resource: @test %>
 
     <p>
@@ -14,9 +14,9 @@
 
     <p>
       <%= f.label :level %>
-      <%= f.number_field :level, id: :test_level, class: 'form-control' %>
+      <%= f.number_field :level, id: :test_level, in: 0..Float::INFINITY, class: 'form-control' %>
     </p>
 
-    <%= f.submit class: 'btn btn-success btn-lg' %>
+    <%= f.submit class: 'btn btn-success btn-lg mt-2' %>
   </div>
 <% end %>

@@ -1,10 +1,20 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-10">
+    <h1 class="display-4 text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
+    <div class="card border-<%= color_border(@test_passage) %> rounded mb-3 mt-4">
+      <h2 class="text-center"><%= test_complete_message(@test_passage) %></h2> 
+      <div class="card-body text-center">
+        <% if @test_passage.success? %>
+          <h3 class='success-color'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</h3>
+        <% else %>
+          <h3 class='fail-color'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</h3>
+        <% end %>
+        
+        <p>
+          <%= link_to t('.back'), tests_path, class: 'btn btn-danger mt-3' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <h2><%= test_complete_message(@test_passage) %></h2> 
-  <% if @test_passage.success? %>
-    <h3 class='success-color'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</h3>
-  <% else %>
-    <h3 class='fail-color'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</h3>
-  <% end %>
-
-<p><%= link_to t('.back'), tests_path, class: 'btn btn-secondary mt-3' %></p>

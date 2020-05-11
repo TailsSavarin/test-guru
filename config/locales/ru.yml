@@ -51,15 +51,16 @@ ru:
 
   test_passages:
     result:
-      header: "%{title} тест завершен"
-      test_pass_succes: "Поздравляем, вы успешно прошли тест!"
-      test_pass_fail: "К сожалению, вы не прошли тест"
+      header: "%{title} Тест Завершен!"
+      test_pass_success: "Поздравляем, вы успешно прошли тест =)"
+      test_pass_fail: "К сожалению, вы не прошли тест :("
       percent: "Процент правильных ответов составляет:"
       back: "К списку тестов"  
     gist:
       success: "Gist успешно создан, ссылка: %{link}"
       failure: "Во время создания gist произошла ошибка!"
     show:
+      answers: "Ответы:"
       header: "%{title} тест"
       question_numbers: "Вопрос %{first} из %{second}" 
       next: "Следующий вопрос"
@@ -165,7 +166,7 @@ ru:
       form_inline:
         submit: "ОК"
       new: 
-        header: "Новый тест"
+        header: "Новый Тест"
         back: "Назад"
       show:
         actions: "Действия"

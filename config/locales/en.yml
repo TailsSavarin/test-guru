@@ -59,6 +59,7 @@ en:
       success: "Gist was successfully created, link: %{link}"
       failure: "An error occurred while saving gist"
     show:
+      answers: "Answers:"
       header: "%{title} test"
       question_numbers: "Questions number %{first} from %{second}" 
       next: "Next"

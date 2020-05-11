@@ -1,22 +1,26 @@
-<h1 class="display-4 text-center"><%= t('.header') %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <h1 class="display-4 text-center"><%= t('.header') %></h1>
 
-<div class="card border-secodary rounded">
-  <div class="card-body">
-    <h3><%= @answer.question.body %></h3>
+    <div class="card border-secodary rounded mb-3 mt-4">
+      <div class="card-body">
+        <h3><%= @answer.question.body %></h3>
 
-    <p>
-      <strong><%= t('.answer') %></strong>
-      <%= @answer.body %>
-    </p>
+        <p>
+          <strong><%= t('.answer') %></strong>
+          <%= @answer.body %>
+        </p>
 
-    <p>
-      <strong><%= t('.status') %></strong>
-      <%= answer_status(@answer) %>
-    </p>
+        <p>
+          <strong><%= t('.status') %></strong>
+          <%= answer_status(@answer) %>
+        </p>
 
-    <p>
-      <%= link_to t('.edit'), edit_admin_answer_path(@answer), class: 'btn btn-primary btn-sm active' %>
-      <%= link_to t('.back'), admin_question_path(@answer.question), class: 'btn btn-secondary btn-sm active' %>
-    </p>
+        <p>
+          <%= link_to t('.edit'), edit_admin_answer_path(@answer), class: 'btn btn-primary btn-sm active' %>
+          <%= link_to t('.back'), admin_question_path(@answer.question), class: 'btn btn-secondary btn-sm active' %>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

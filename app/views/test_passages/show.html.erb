@@ -1,25 +1,36 @@
-<h1 class="display-4 text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-10">
+    <h1 class="display-4 text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<div class="card border-info">
-  <div class="card-body">
-    <p class="text-center">
-      <%= t('.question_numbers', first: @test_passage.current_question_number, second: @test_passage.test.questions.size) %>
-    <p>
+    <div class="card border-info rounded mb-3 mt-4">
+      <div class="card-body">
+        <p class="text-center">
+        <%= t('.question_numbers', first: @test_passage.current_question_number,
+                                   second: @test_passage.test.questions.size) %>
+        <p>
 
-    <div class="progress">
-      <%= content_tag :div,
-                      progress_bar(@test_passage),
-                      class: 'progress-bar progress-bar-striped progress-bar-animated bg-info',
-                      data: { question_number: @test_passage.current_question_number,
-                              questions_count: @test_passage.test.questions.size } %>
-    </div><br>
+        <div class="progress">
+          <%= content_tag :div,
+                          progress_bar(@test_passage),
+                          class: 'progress-bar progress-bar-striped progress-bar-animated bg-info',
+                          data: { question_number: @test_passage.current_question_number,
+                                  questions_count: @test_passage.test.questions.size } %>
+        </div>
 
-    <p><strong><%= @test_passage.current_question.body %></strong></p>
-    
-    <%= render "form" %>
+        <h4 class="text-center mt-4">
+          <strong><%= @test_passage.current_question.body %></strong>
+        </h4>
 
-    <p>
-      <%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-outline-info mt-3' %>
-    </p>
+        <p>
+          <strong><%= t('.answers') %></strong>
+        </p>
+        
+        <%= render "form" %>
+
+        <p>
+          <%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-outline-info mt-3 float-right' %>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
