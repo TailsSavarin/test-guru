@@ -38,6 +38,8 @@ en:
       sign_up: "Sign up"
       login: "Login"
       login_time: "Last login time:"
+    footer:
+      contact: "Contact Us"
 
   devise:
     registrations:

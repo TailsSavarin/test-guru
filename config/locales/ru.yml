@@ -28,6 +28,14 @@ ru:
       answer: 
         body: "Напишите ваш ответ:"
         correct: "Правильный:"
+      feedback:
+        body: "Отзыв:"
+        
+  feedbacks:
+    new: 
+      header: "Напишите Нам"
+    form:
+      submit: "Отправить"
 
   layouts:
     nav:
@@ -38,6 +46,7 @@ ru:
       sign_up: "Зарегистрироваться"
       login: "Войти"
       login_time: "Последнее время входа:"
+      contact: "Свяжитесь с нами"
 
   devise:
     registrations:
