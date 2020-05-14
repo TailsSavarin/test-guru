@@ -5,9 +5,12 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    body = params[:body]
+    body = params[:feedback][:body]
 
-    FeedbacksMailer.feedback(current_user, body).deliver_now if body.present?
-    redirect_to root_path, notice: t('.thanks')
+    if body.present?
+      FeedbacksMailer.feedback(current_user, body).deliver_now 
+      redirect_to root_path, notice: t('.thanks')
+    else
+      redirect_to new_feedback_path, alert: t('.try_again')
   end
 end
