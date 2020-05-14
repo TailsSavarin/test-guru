@@ -3,6 +3,6 @@ class FeedbacksMailer < ApplicationMailer
     @body = body
     @user = user
 
-    mail to: ENV['SMTP_USERNAME'], subject: "FeedBack"
+    mail to: Admin.pluck(:email)
   end
 end
