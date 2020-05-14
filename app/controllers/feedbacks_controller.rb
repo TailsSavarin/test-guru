@@ -12,5 +12,6 @@ class FeedbacksController < ApplicationController
       redirect_to root_path, notice: t('.thanks')
     else
       redirect_to new_feedback_path, alert: t('.try_again')
+    end
   end
 end
