@@ -32,6 +32,8 @@ ru:
         body: "Отзыв:"
         
   feedbacks:
+    create:
+      thanks: "Спасибо, что оставили отзыв о нас!"
     new: 
       header: "Напишите Нам"
     form:

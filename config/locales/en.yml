@@ -28,6 +28,16 @@ en:
       answer: 
         body: "Body:"
         correct: "Correct:"
+      feedback: 
+        body: "Feedback:"
+
+  feedbacks:
+    create:
+      thanks: "Thank you, for leaving feedback about us!"
+    new:
+      header: "Write to us"
+    form:
+      submit: "Send"
 
   layouts:
     nav:
