@@ -39,7 +39,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.0]
     remove_column(:users, :password_digest)
     change_column_default(:users, :email, '')
 
-    add_index :users, :email,                unique: true
+    # add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
     add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
@@ -52,7 +52,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.0]
                            :confirmation_sent_at, :unconfirmed_email)
 
     add_column :users, :password_digest, :string
-    remove_index(:users, :email)
+    # remove_index(:users, :email)
     change_column_default(:users, :email, nil)
   end
 end

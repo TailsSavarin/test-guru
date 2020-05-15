@@ -1,41 +1,51 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <h1 class="display-4 text-center"><%= t('.header') %></h1>
 
-<p>
- <strong><%= t('.category') %></strong>
-  <%= @test.category.title%>
-</p>
+    <div class="card border-secondary rounded mb-3 mt-4">
+      <div class="card-body">
+        <p>
+          <strong><%= t('.category') %></strong>
+          <%= @test.category.title%>
+        </p>
 
-<p>
-  <strong><%= t('.title') %></strong>
-  <%= @test.title %>
-</p>
+        <p>
+          <strong><%= t('.title') %></strong>
+          <%= @test.title %>
+        </p>
 
-<p>
-  <strong><%= t('.level') %></strong>
-  <%= @test.level %>
-</p>
+        <p>
+          <strong><%= t('.level') %></strong>
+          <%= @test.level %>
+        </p>
 
-<p>
-  <strong><%= t('.author') %></strong>
-  <%= @test.author.first_name%>
-</p>
+        <p>
+          <strong><%= t('.author') %></strong>
+          <%= @test.author.first_name%>
+        </p>
 
-<table class="table table-borderless">
-  <thead>
-    <tr>
-      <th><%= t('.questions') %></th>
-      <th><%= t('.actions') %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @test.questions %>
-  </tbody>
-</table>
+        <table class="table table-hover text-center table-sm mt-3">
+          <thead>
+          <tr>
+            <th scope="col"><%= t('.questions') %></th>
+            <th scope="col"><%= t('.actions') %></th>
+          </tr>
+          </thead>
 
-<p><%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-success btn-lg' %></p>
+          <tbody>
+            <%= render @test.questions %>
+          </tbody>
+        </table>
 
-<p>
-  <%= link_to t('.edit'), edit_admin_test_path(@test), class: 'btn btn-primary btn-sm active' %> 
-  <%= link_to t('.back'), admin_tests_path, class: 'btn btn-secondary btn-sm active' %>
-</p>
+        <p>
+          <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-success btn-lg mt-2' %>
+        </p>
 
+        <p>
+          <%= link_to t('.edit'), edit_admin_test_path(@test), class: 'btn btn-primary btn-sm active' %> 
+          <%= link_to t('.back'), admin_tests_path, class: 'btn btn-secondary btn-sm active' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

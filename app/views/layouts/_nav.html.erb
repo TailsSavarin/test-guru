@@ -1,5 +1,7 @@
 <nav class="navbar navbar-dark bg-dark">
-  <%= link_to t('.testguru_welcome'), root_path, class: 'navbar-brand' %>
+  <h1 class="testguru-logo">
+    <%= link_to t('.testguru_welcome'), root_path %>
+  </h1>
 
   <span class="navbar-text">
     <% if current_user&.admin? %>
@@ -11,12 +13,12 @@
       <%= t('.login_time') %>
       <%= current_time %> |
       <%= octicon 'person' %>
-      <%= t('.profile', email: current_user.email) %> |
-      <%= octicon 'sign-out' %>
-      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+      <%= t('.profile', email: current_user.email) %>
+      <%= link_to t('.contact'), new_feedback_path, class: 'btn btn-outline-primary' %>
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger' %>
     <% else %>
-      <%= link_to t('.login'), new_user_session_path %> |
-      <%= link_to t('.sign_up'), new_user_registration_path %> 
+      <%= link_to t('.login'), new_user_session_path, class: 'btn btn-outline-primary' %>
+      <%= link_to t('.sign_up'), new_user_registration_path, class: 'btn btn-outline-success' %> 
     <% end %>
   </span>
 </nav>

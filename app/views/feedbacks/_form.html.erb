@@ -1,0 +1,13 @@
+<%= form_with scope: :feedback, url: feedbacks_path, local: true do |f| %>
+  <%= render 'shared/errors', resource: @feedback %>
+    <div class="form_group">
+
+    <p>
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 7, cols: 60, class: 'form-control' %>
+    </p>
+
+    <%= f.submit t('.submit'), class: "btn btn-primary mt-1" %>
+  </div>
+<% end %>
+

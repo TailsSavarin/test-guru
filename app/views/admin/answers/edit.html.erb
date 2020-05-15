@@ -1,10 +1,20 @@
-<h1><%= t('.header') %></h1>
+<div claas="row justify-content-center mt-3">
+  <div class="col col-mb-8">
+    <h1 class="display-4 text-center"><%= t('.header') %></h1>
 
-<p>
-  <strong><%= t('.body') %></strong>
-  <%= @answer.question.body %>
-</p>
+    <div class="card border-success rounded mb-3 mt-4">
+      <div class="card-body">
+        <p>
+          <strong><%= t('.body') %></strong>
+          <%= @answer.question.body %>
+        </p>
 
-<%= render "form" %>
+        <%= render "form" %>
 
-<p><%= link_to t('.back'), admin_question_path(@answer.question), class: "btn btn-secondary btn-sm" %></p>
+        <p>
+          <%= link_to t('.back'), admin_question_path(@answer.question), class: "btn btn-secondary btn-sm float-right" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

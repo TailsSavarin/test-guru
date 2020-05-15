@@ -24,20 +24,31 @@ ru:
         title: "Название:"
         level: "Уровень:"
       question:
-        body: "Суть вопроса:"
+        body: "Напишите ваш вопрос:"
       answer: 
-        body: "Суть ответа:"
+        body: "Напишите ваш ответ:"
         correct: "Правильный:"
+      feedback:
+        body: "Отзыв:"
+        
+  feedbacks:
+    create:
+      thanks: "Спасибо, что оставили отзыв о нас!"
+    new: 
+      header: "Напишите Нам"
+    form:
+      submit: "Отправить"
 
   layouts:
     nav:
       admin: "Панель Администратора"
-      testguru_welcome: "TestGuru | Коллекция Тестов"
+      testguru_welcome: "TestGuru"
       profile: "Текущий профиль: %{email}"
       logout: "Выйти"
       sign_up: "Зарегистрироваться"
       login: "Войти"
       login_time: "Последнее время входа:"
+      contact: "Свяжитесь с нами"
 
   devise:
     registrations:
@@ -51,15 +62,16 @@ ru:
 
   test_passages:
     result:
-      header: "%{title} тест завершен"
-      test_pass_succes: "Поздравляем, вы успешно прошли тест!"
-      test_pass_fail: "К сожалению, вы не прошли тест"
+      header: "%{title} Тест Завершен!"
+      test_pass_success: "Поздравляем, вы успешно прошли тест =)"
+      test_pass_fail: "К сожалению, вы не прошли тест :("
       percent: "Процент правильных ответов составляет:"
       back: "К списку тестов"  
     gist:
       success: "Gist успешно создан, ссылка: %{link}"
       failure: "Во время создания gist произошла ошибка!"
     show:
+      answers: "Ответы:"
       header: "%{title} тест"
       question_numbers: "Вопрос %{first} из %{second}" 
       next: "Следующий вопрос"
@@ -81,7 +93,7 @@ ru:
 
   admin:
     nav:
-      title: "TestGuru | Коллекция Тестов"
+      testguru_welcome: "TestGuru"
       admin: "Панель Администратора"
       login_time: "Последнее время входа:"
       profile: "Текущий профиль: %{email}" 
@@ -91,20 +103,20 @@ ru:
         header: "Список Gist"
         question: "Вопрос"
         gist_url: "Gist адрес"
-        user: "Почта пользователя"
+        user: "Почта Пользователя"
         back: "Назад к тестам"
     answers:
       edit:
         header: "Изменить Ответ"
-        body: "Суть вопроса:"
+        body: "Вопрос:"
         back: "Назад"
       new:
-        header: "Создать новый ответ:"
+        header: "Новый Ответ"
         back: "Назад"
       show:
         correct_answer: "Верный ответ"
         wrong_answer: "Неверный ответ"
-        header: "Информация о ответе:"
+        header: "Информация о Ответе"
         answer: "Ответ:"
         edit: "Изменить"
         status: "Состояние:"
@@ -125,16 +137,16 @@ ru:
         header: "Изменить Вопрос"
         back: "Назад"
       new:
-        header: "Создать новый вопрос:"
+        header: "Новый Вопрос"
         back: "Назад"
       show:
         actions: "Действия"
-        header: "Информация о вопросе:"
-        body: "Суть вопроса:"
+        header: "Информация о Вопросе"
+        body: "Вопрос:"
         edit: "Изменить"
         delete: "Удалить"
         confirm: "Вы уверены?"
-        answers: "Ответы:"
+        answers: "Ответы"
         new_answer: "Новый ответ"
         back: "Назад"
       question:
@@ -165,18 +177,18 @@ ru:
       form_inline:
         submit: "ОК"
       new: 
-        header: "Создать новый тест:"
+        header: "Новый Тест"
         back: "Назад"
       show:
         actions: "Действия"
-        header: "Информация о тесте:"
+        header: "Информация о Тесте"
         category: "Категория:"
         title: "Название:"
         level: "Уровень:"
         author: "Автор:"
-        questions: "Вопросы:"
+        questions: "Вопросы"
         edit: "Изменить"
-        new_question: "Новый вопрос"
+        new_question: "Новый Вопрос"
         back: "Назад"
       test:
         show: "Показать"

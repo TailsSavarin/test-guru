@@ -1,0 +1,65 @@
+.btn-session {
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 20px;
+  padding: 13px;
+  width: 200px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+  background-image: linear-gradient(to left, #12CBC4,#0652DD,#12CBC4);
+}
+
+.btn-session:hover {
+  background-position: right;
+}
+
+.btn-registration {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  background: none;
+  border: 4px solid;
+  color: #0984e3;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+}
+
+.btn-registration::before,.btn-registration::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: white;
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+.btn-registration::before{
+  top: -4px;
+  left: 10%;
+}
+
+.btn-registration::after{
+  bottom: -4px;
+  right: 10%;
+}
+
+.btn-registration:hover::before{
+  left: 80%;
+}
+
+.btn-registration:hover::after{
+  right: 80%;
+}

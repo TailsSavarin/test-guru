@@ -1,12 +1,12 @@
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |f| %>
   <div class="form-group">
     <%= f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
-      <div class="form-check">
+      <div class="form-check label">
         <%= b.check_box id: "answer_ids_#{b.object.id}" %>
         <%= b.label %>
       </div>
     <% end %>
 
-    <%= f.submit t('test_passages.show.next'), class: 'btn btn-primary mt-3' %>
+    <%= f.submit t('test_passages.show.next'), class: 'btn btn-info mt-4' %>
   </div>
 <% end %>

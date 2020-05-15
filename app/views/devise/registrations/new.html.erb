@@ -1,6 +1,6 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
-    <h2><%= t('.sign_up') %></h2>
+    <h2 class="text-center"><%= t('.sign_up') %></h2>
 
     <div class="card border-primary">
       <div class="card-body">
@@ -19,7 +19,7 @@
 
             <p>
               <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true, class: 'form-control', autocomplete: "email", placeholder: "name@example.com" %>
+              <%= f.email_field :email, class: 'form-control', autocomplete: "email", placeholder: "name@example.com" %>
             </p>
 
             <p>
@@ -45,7 +45,7 @@
                 </small>
             </p>
 
-            <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
+            <%= f.button t('.sign_up'),type: :submit, class: 'btn-registration' %>
           </div>
         <% end %>
       </div>

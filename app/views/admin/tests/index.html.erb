@@ -1,29 +1,35 @@
-<h1><%= t('.header') %></h1>
+<div class="row mt-3">
+  <div class="col col-md">
+    <h1 class="display-4 text-center"><%= t('.header') %></h1>
 
+    <%= render 'shared/errors', resource: @test %>
+        
+    <table class="table table-hover text-center mt-3">
+      <thead>
+      <tr>
+        <th scope="col" class="sort-by-title pointer">
+          <%= t('.title') %>
+          <%= octicon 'line-arrow-up', class: 'text-success hide' %>
+          <%= octicon 'line-arrow-down', class: 'text-success hide' %>
+        </th>
+        <th scope="col"><%= t('.category') %></th>
+        <th scope="col"><%= t('.level') %></th>
+        <th scope="col"><%= t('.author') %></th>
+        <th scope="col"><%= t('.questions') %></th>
+        <th scope="col" colspan="3"><%= t('.actions') %></th>
+      </tr>
+      </thead>
 
-<%= render 'shared/errors', resource: @test %>
-    
-<table class="table text-center">
-  <thead class="thead">
-    <tr>
-      <th class="sort-by-title pointer">
-        <%= t('.title') %>
-        <%= octicon 'line-arrow-up', class: 'text-success hide' %>
-        <%= octicon 'line-arrow-down', class: 'text-success hide' %>
-      </th>
-      <th><%= t('.category') %></th>
-      <th><%= t('.level') %></th>
-      <th><%= t('.author') %></th>
-      <th><%= t('.questions') %></th>
-      <th colspan="3"><%= t('.actions') %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @tests %>
-  </tbody>
-</table>
+      <tbody>
+        <%= render @tests %>
+      </tbody>
+    </table>
 
-<p><%= link_to t('.gists'), admin_gists_path, class: 'btn btn-outline-secondary btn-lg' %></p>
-<p><%= link_to t('.new_test'), new_admin_test_path, class: 'btn btn-success btn-lg' %></p>
-
-
+    <p>
+      <%= link_to t('.gists'), admin_gists_path, class: 'btn btn-outline-secondary btn-lg' %>
+    </p>
+    <p>
+      <%= link_to t('.new_test'), new_admin_test_path, class: 'btn btn-success btn-lg' %>
+    </p>
+  </div>
+</div>

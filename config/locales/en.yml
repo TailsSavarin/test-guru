@@ -28,16 +28,28 @@ en:
       answer: 
         body: "Body:"
         correct: "Correct:"
+      feedback: 
+        body: "Feedback:"
+
+  feedbacks:
+    create:
+      thanks: "Thank you, for leaving feedback about us!"
+    new:
+      header: "Write to us"
+    form:
+      submit: "Send"
 
   layouts:
     nav:
       admin: "Admin Panel"
-      testguru_welcome: "TestGuru | Test Collection"
+      testguru_welcome: "TestGuru"
       profile: "Current profile: %{email}"
       logout: "Logout"
       sign_up: "Sign up"
       login: "Login"
       login_time: "Last login time:"
+    footer:
+      contact: "Contact Us"
 
   devise:
     registrations:
@@ -59,6 +71,7 @@ en:
       success: "Gist was successfully created, link: %{link}"
       failure: "An error occurred while saving gist"
     show:
+      answers: "Answers:"
       header: "%{title} test"
       question_numbers: "Questions number %{first} from %{second}" 
       next: "Next"
@@ -80,7 +93,7 @@ en:
 
   admin:
     nav:
-      title: "TestGuru | Test Collection"
+      testguru_welcome: "TestGuru"
       admin: "Admin Panel"
       login_time: "Last login time:"
       profile: "Current profile: %{email}" 
