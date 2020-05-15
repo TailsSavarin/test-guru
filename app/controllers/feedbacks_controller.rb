@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    body = params[:feedback][:body]
+    body = params[:body]
 
     if body.present?
       FeedbacksMailer.feedback(current_user, body).deliver_now 
