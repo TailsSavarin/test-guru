@@ -42,7 +42,7 @@ en:
   layouts:
     nav:
       admin: "Admin Panel"
-      testguru_welcome: "TestGuru | Test Collection"
+      testguru_welcome: "TestGuru"
       profile: "Current profile: %{email}"
       logout: "Logout"
       sign_up: "Sign up"
@@ -93,7 +93,7 @@ en:
 
   admin:
     nav:
-      title: "TestGuru | Test Collection"
+      testguru_welcome: "TestGuru"
       admin: "Admin Panel"
       login_time: "Last login time:"
       profile: "Current profile: %{email}" 

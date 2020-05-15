@@ -1,5 +1,7 @@
 <nav class="navbar navbar-dark bg-dark">
-  <%= link_to t('.testguru_welcome'), root_path, class: 'navbar-brand' %>
+  <h1 class="testguru-logo">
+    <%= link_to t('.testguru_welcome'), root_path %>
+  </h1>
 
   <span class="navbar-text">
     <% if current_user&.admin? %>

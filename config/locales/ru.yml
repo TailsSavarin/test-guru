@@ -42,7 +42,7 @@ ru:
   layouts:
     nav:
       admin: "Панель Администратора"
-      testguru_welcome: "TestGuru | Коллекция Тестов"
+      testguru_welcome: "TestGuru"
       profile: "Текущий профиль: %{email}"
       logout: "Выйти"
       sign_up: "Зарегистрироваться"
@@ -93,7 +93,7 @@ ru:
 
   admin:
     nav:
-      title: "TestGuru | Коллекция Тестов"
+      testguru_welcome: "TestGuru"
       admin: "Панель Администратора"
       login_time: "Последнее время входа:"
       profile: "Текущий профиль: %{email}" 
