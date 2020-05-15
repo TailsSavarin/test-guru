@@ -3,12 +3,16 @@ class TestsController < ApplicationController
   before_action :set_test, only: :start
 
   def index
-    @tests = Test.all
+    @tests = Test.with_questions
   end
 
   def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test), notice: t('.after_start_greeting') 
+    if @test
+      current_user.tests.push(@test)
+      redirect_to current_user.test_passage(@test), notice: t('.after_start_greeting') 
+    else
+      redirect_to :index, notice: t('.no_questions')
+    end
   end
 
   private
