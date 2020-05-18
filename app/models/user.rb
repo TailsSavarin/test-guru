@@ -25,4 +25,8 @@ class User < ApplicationRecord
   def admin?
     is_a?(Admin)
   end
+
+  def successful_test
+    self.test_passages.completed_successfully.map(&:test_id).uniq
+  end
 end

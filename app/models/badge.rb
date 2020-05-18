@@ -3,4 +3,5 @@ class Badge < ApplicationRecord
   has_many :users, through: :user_badges
 
   validates :title, presence: true
+  validates :rule, presence: true
 end
