@@ -14,6 +14,10 @@ en:
       answer:
         create: "Create Answer"
         update: "Update Answer"
+      badge:
+        create: "Create Badge"
+        update: "Update Badge"
+
     label:
       user:
         email: "Email"
@@ -30,6 +34,11 @@ en:
         correct: "Correct:"
       feedback: 
         body: "Feedback:"
+      badge:
+        title: "Title:"
+        image: "Image path"
+        rule: "Rule:"
+        description: "Description:"
 
   feedbacks:
     create:
@@ -48,14 +57,15 @@ en:
       sign_up: "Sign up"
       login: "Login"
       login_time: "Last login time:"
-    footer:
       contact: "Contact Us"
+      my_badges: "Badges"
 
   devise:
     registrations:
       new:
         success_password: "Password match"
         failure_password: "Password didn't match"
+
     sessions: 
       create: 
         after_sign_in_greeting: "Hello, %{name}! Have a nice day!"
@@ -90,6 +100,22 @@ en:
       start: "START"
     start:
       after_start_greeting: "Good Luck! Your test passage has begun!"
+
+  badges:
+    index:
+      header: "Badge List"
+      title: "Title"
+      image: "Image"
+      description: "Description"
+      current_badges: "My Badges"
+      back: "Back"
+    current:
+      header: "My Badges"
+      title: "Title"
+      image: "Image"
+      description: "Description"
+      badge_list: "Badge List"
+      back: "Back"
 
   admin:
     nav:
@@ -166,6 +192,7 @@ en:
         back: "Back"
       index:
         gists: "Gist List"
+        badges: "Badge List"
         header: "Test List"
         category: "Category"
         title: "Title"
@@ -177,7 +204,7 @@ en:
       form_inline:
         submit: "OK"
       new: 
-        header: "Create a new test:"
+        header: "New Test:"
         back: "Back"
       show:
         actions: "Actions"
@@ -201,6 +228,40 @@ en:
         success: "Test was successfully updated!"
       destroy: 
         success: "Test was successfully deleted!"
+    badges:
+      edit:
+        header: "Edit Badge"
+        back: "Back"
+      new:
+        header: "New Badge"
+        back: "Back"
+      show:
+        header: "Badge Information"
+        title: "Title:"
+        image: "Image:"
+        rule: "Rule:"
+        description: "Description"
+        edit: "Edit"
+        back: "Back"
+      index:
+        header: "Badge List"
+        title: "Title"
+        image: "Image"
+        rule: "Rule"
+        description: "Description"
+        actions: "Actions"
+        new_badge: "New Badge"
+      badge:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      create: 
+        success: "Badge was successfully created!"
+      update: 
+        success: "Badge was successfully updated!"
+      destroy: 
+        success: "Badge was successfully deleted!"
 
   test_mailer:
     completed_test:

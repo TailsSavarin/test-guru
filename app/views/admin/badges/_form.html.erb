@@ -1,0 +1,28 @@
+<%= form_with model: [:admin, @badge], local: true do |f| %>
+  <div class="form-group col-md-8">
+    <%= render "shared/errors", resource: @answer %>
+
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, id: :badge_title, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= f.label :image %>
+      <%= f.text_field :image, id: :badge_image, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= f.label :rule %>
+      <%= f.select :rule, options_for_select(Badge::BADGE_LIST), {}, class: 'form-control' %>
+    </p>
+    
+    <p>
+      <%= f.label :description %>
+      <%= f.text_field :description, id: :badge_description, class: 'form-control' %>
+    </p>
+
+    <%= f.submit class: 'btn btn-success btn-lg mt-2' %>
+  </div>
+<% end %> 
+

@@ -14,6 +14,10 @@ ru:
       answer:
         create: "Создать Ответ"
         update: "Обновить Ответ"
+      badge:
+        create: "Создать Бейдж"
+        update: "Обновить Бейдж"
+
     label:
       user:
         email: "Почта"
@@ -30,6 +34,11 @@ ru:
         correct: "Правильный:"
       feedback:
         body: "Отзыв:"
+      badge:
+        title: "Название:"
+        image: "Изображение:"
+        rule: "Правило получения:"
+        description: "Описание:"
         
   feedbacks:
     create:
@@ -49,6 +58,7 @@ ru:
       login: "Войти"
       login_time: "Последнее время входа:"
       contact: "Свяжитесь с нами"
+      my_badges: "Бейджи"
 
   devise:
     registrations:
@@ -90,6 +100,22 @@ ru:
       start: "НАЧАТЬ"
     start:
       after_start_greeting: "Удачи! Вы начали проходить тест!"
+  
+  badges:
+    index:
+      header: "Список Бейджей"
+      title: "Название"
+      image: "Изображение"
+      description: "Описание"
+      current_badges: "Мои Бейджи"
+      back: "Назад"
+    current:
+      header: "Мои Бейджи"
+      title: "Название"
+      image: "Изображение"
+      description: "Описание"
+      badge_list: "Список Бейджей"
+      back: "Назад"
 
   admin:
     nav:
@@ -104,7 +130,7 @@ ru:
         question: "Вопрос"
         gist_url: "Gist адрес"
         user: "Почта Пользователя"
-        back: "Назад к тестам"
+        back: "Назад"
     answers:
       edit:
         header: "Изменить Ответ"
@@ -174,6 +200,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         new_test: "Новый Тест"
+        badges: "Список Бейджей"
       form_inline:
         submit: "ОК"
       new: 
@@ -201,6 +228,41 @@ ru:
         success: "Тест был успешно обновлен!"
       destroy: 
         success: "Тест был успешно удален!"
+    badges:
+      edit:
+        header: "Изменить Бейдж"
+        back: "Назад"
+      new:
+        header: "Новый Бейдж"
+        back: "Назад"
+      show:
+        header: "Информация о Бейдже"
+        title: "Название:"
+        image: "Изображение:"
+        rule: "Правило получения:"
+        description: "Описание:"
+        edit: "Изменить"
+        back: "Назад"
+      index:
+        header: "Список Бейджей"
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило получения"
+        description: "Описание"
+        actions: "Действия"
+        new_badge: "Новый Бейдж"
+        back: "Назад"
+      badge:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      create: 
+        success: "Бейдж был успешно создан!"
+      update: 
+        success: "Бейдж был успешно обновлен!"
+      destroy: 
+        success: "Бейдж был успешно удален!"
 
   test_mailer:
     completed_test:

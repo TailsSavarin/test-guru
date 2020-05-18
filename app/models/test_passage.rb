@@ -10,6 +10,10 @@ class TestPassage < ApplicationRecord
 
   scope :completed_successfully, -> { where(completed_successfully: true) }
 
+  def completed_successfully?
+    completed? && success?
+  end
+
   def completed?
     current_question.nil?
   end

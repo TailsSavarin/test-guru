@@ -1,0 +1,34 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <h1 class="display-4 text-center"><%= t('.header') %></h1>
+
+    <div class="card border-secondary rounded mb-3 mt-4">
+      <div class="card-body">
+        <p>
+          <strong><%= t('.title') %></strong>
+          <%= @badge.title %>
+        </p>
+
+        <p>
+          <strong><%= t('.image') %></strong>
+          <%= @badge.image %>
+        </p>
+
+        <p>
+          <strong><%= t('.rule') %></strong>
+          <%= @badge.rule %>
+        </p>
+
+        <p>
+          <strong><%= t('.description') %></strong>
+          <%= @badge.description %>
+        </p>
+
+        <p>
+          <%= link_to t('.edit'), edit_admin_badge_path(@badge), class: 'btn btn-primary btn-sm active' %> 
+          <%= link_to t('.back'), admin_badges_path, class: 'btn btn-secondary btn-sm active' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
