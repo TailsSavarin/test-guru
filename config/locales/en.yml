@@ -39,6 +39,7 @@ en:
         image: "Image path"
         rule: "Rule:"
         description: "Description:"
+        value: "Value"
 
   feedbacks:
     create:
@@ -77,6 +78,9 @@ en:
       test_pass_fail: "Sorry, you did not pass the test!"
       percent: "The percentage of currect answers was:"
       back: "To the test list"  
+      success: "You have successfullyt completed the %{title} test. You are doing great, keep up the good work!"
+      failure: "You could not pass the %{title} test. Try again, you will succeed!"
+
     gist:
       success: "Gist was successfully created, link: %{link}"
       failure: "An error occurred while saving gist"
@@ -96,12 +100,22 @@ en:
       author: "Author"
       actions: "Actions"
       questions: "Questions"
+      status: "Status"
     test: 
       start: "START"
+      completed_successfully: "Completed"
+      completed_unsuccessfully: "Failed"
+      not_passed_yet: "Not passed"
     start:
       after_start_greeting: "Good Luck! Your test passage has begun!"
 
   badges:
+    form:
+      button_info: "Details on selecting a condition parameter"
+      info: "You may choose:"
+      info1: "All category tests: Backend[0] ro Frontend[1]"
+      info2: "All level tests: Any number [0-100]"
+      rule: "Select rule"
     index:
       header: "Badge List"
       title: "Title"
@@ -116,6 +130,7 @@ en:
       description: "Description"
       badge_list: "Badge List"
       back: "Back"
+      no_badges: "You have no badges yet"
 
   admin:
     nav:

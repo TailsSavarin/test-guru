@@ -10,10 +10,6 @@ class TestPassage < ApplicationRecord
 
   scope :completed_successfully, -> { where(completed_successfully: true) }
 
-  def completed_successfully?
-    completed? && success?
-  end
-
   def completed?
     current_question.nil?
   end
@@ -55,6 +51,6 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    test.questions.order(:id).where('id > ?' , current_question.nil? ? 0 : current_question.id).first
   end
 end

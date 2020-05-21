@@ -5,7 +5,7 @@
 
   <span class="navbar-text">
     <% if current_user&.admin? %>
-      <%= link_to t('.admin'), admin_tests_path %> |
+      <%= link_to t('.admin'), admin_tests_path, class: 'btn btn-outline-warning' %>
     <% end %> 
 
     <% if user_signed_in? %>

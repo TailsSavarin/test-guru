@@ -39,6 +39,7 @@ ru:
         image: "Изображение:"
         rule: "Правило получения:"
         description: "Описание:"
+        value: "Параметр условия"
         
   feedbacks:
     create:
@@ -76,7 +77,9 @@ ru:
       test_pass_success: "Поздравляем, вы успешно прошли тест =)"
       test_pass_fail: "К сожалению, вы не прошли тест :("
       percent: "Процент правильных ответов составляет:"
-      back: "К списку тестов"  
+      success: "Вы успешно завершили %{title} тест. У вас отлично получается, продолжайте в том же духе!"
+      failure: "Вы не смогли пройти %{title} тест. Попробуйте еще раз, у вас обязательно получится!"
+      back: "Вернуться к Тестам"  
     gist:
       success: "Gist успешно создан, ссылка: %{link}"
       failure: "Во время создания gist произошла ошибка!"
@@ -86,6 +89,9 @@ ru:
       question_numbers: "Вопрос %{first} из %{second}" 
       next: "Следующий вопрос"
       gist_question: "Добавить вопрос в свой Gist"
+    update: 
+      badges: "За успешное прохождение тестов можно получить различные бейджи, вы можете найти их в правом верхнем углу"
+      
 
   tests:
     index:
@@ -96,7 +102,11 @@ ru:
       author: "Автор"
       questions: "Вопросы"
       actions: "Действия"
+      status: "Статус"
     test: 
+      completed_successfully: "Пройден успешно"
+      completed_unsuccessfully: "Пройден неудачно"
+      not_passed_yet: "Не пройден"
       start: "НАЧАТЬ"
     start:
       after_start_greeting: "Удачи! Вы начали проходить тест!"
@@ -116,6 +126,7 @@ ru:
       description: "Описание"
       badge_list: "Список Бейджей"
       back: "Назад"
+      no_badges: "У вас пока нет Бейджей"
 
   admin:
     nav:
@@ -229,6 +240,11 @@ ru:
       destroy: 
         success: "Тест был успешно удален!"
     badges:
+      form:
+        info: "Инофрмация о выборе параметра условия"
+        info1: "Для категорий: Backend - 0 или Frontend - 1"
+        info2: "Для уровней: 0 - 100"
+        rule: "Выберите правило"
       edit:
         header: "Изменить Бейдж"
         back: "Назад"
