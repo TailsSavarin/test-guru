@@ -14,6 +14,10 @@ ru:
       answer:
         create: "Создать Ответ"
         update: "Обновить Ответ"
+      badge:
+        create: "Создать Бейдж"
+        update: "Обновить Бейдж"
+
     label:
       user:
         email: "Почта"
@@ -30,10 +34,17 @@ ru:
         correct: "Правильный:"
       feedback:
         body: "Отзыв:"
+      badge:
+        title: "Название:"
+        image: "Изображение:"
+        rule: "Правило получения:"
+        description: "Описание:"
+        value: "Параметр условия"
         
   feedbacks:
     create:
       thanks: "Спасибо, что оставили отзыв о нас!"
+      try_again: "Что-то пошло не так, попробуйте еще раз"
     new: 
       header: "Напишите Нам"
     form:
@@ -49,6 +60,7 @@ ru:
       login: "Войти"
       login_time: "Последнее время входа:"
       contact: "Свяжитесь с нами"
+      my_badges: "Бейджи"
 
   devise:
     registrations:
@@ -66,7 +78,9 @@ ru:
       test_pass_success: "Поздравляем, вы успешно прошли тест =)"
       test_pass_fail: "К сожалению, вы не прошли тест :("
       percent: "Процент правильных ответов составляет:"
-      back: "К списку тестов"  
+      success: "Вы успешно завершили %{title} тест. У вас отлично получается, продолжайте в том же духе!"
+      failure: "Вы не смогли пройти %{title} тест. Попробуйте еще раз, у вас обязательно получится!"
+      back: "Вернуться к Тестам"  
     gist:
       success: "Gist успешно создан, ссылка: %{link}"
       failure: "Во время создания gist произошла ошибка!"
@@ -76,6 +90,9 @@ ru:
       question_numbers: "Вопрос %{first} из %{second}" 
       next: "Следующий вопрос"
       gist_question: "Добавить вопрос в свой Gist"
+    update: 
+      badges: "За успешное прохождение тестов можно получить различные бейджи, вы можете найти их в правом верхнем углу"
+      
 
   tests:
     index:
@@ -86,10 +103,29 @@ ru:
       author: "Автор"
       questions: "Вопросы"
       actions: "Действия"
+      status: "Статус"
+      info: "Зеленый - тест пройден.\nКрасный - тест не пройден.\nТемный - тест еще не проходился."
     test: 
       start: "НАЧАТЬ"
     start:
       after_start_greeting: "Удачи! Вы начали проходить тест!"
+  
+  badges:
+    index:
+      header: "Список Бейджей"
+      title: "Название"
+      image: "Изображение"
+      description: "Описание"
+      current_badges: "Мои Бейджи"
+      back: "Назад"
+    current:
+      header: "Мои Бейджи"
+      title: "Название"
+      image: "Изображение"
+      description: "Описание"
+      badge_list: "Список Бейджей"
+      back: "Назад"
+      no_badges: "У вас пока нет Бейджей"
 
   admin:
     nav:
@@ -104,7 +140,7 @@ ru:
         question: "Вопрос"
         gist_url: "Gist адрес"
         user: "Почта Пользователя"
-        back: "Назад к тестам"
+        back: "Назад"
     answers:
       edit:
         header: "Изменить Ответ"
@@ -174,6 +210,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         new_test: "Новый Тест"
+        badges: "Список Бейджей"
       form_inline:
         submit: "ОК"
       new: 
@@ -201,6 +238,45 @@ ru:
         success: "Тест был успешно обновлен!"
       destroy: 
         success: "Тест был успешно удален!"
+    badges:
+      form:
+        info_button: "Инофрмация о выборе параметра условия"
+        info: "Для категорий: Backend - 1 или Frontend - 2\nДля уровней: 0 - 100"
+        rule: "Выберите правило"
+      edit:
+        header: "Изменить Бейдж"
+        back: "Назад"
+      new:
+        header: "Новый Бейдж"
+        back: "Назад"
+      show:
+        header: "Информация о Бейдже"
+        title: "Название:"
+        image: "Изображение:"
+        rule: "Правило получения:"
+        description: "Описание:"
+        edit: "Изменить"
+        back: "Назад"
+      index:
+        header: "Список Бейджей"
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило получения"
+        description: "Описание"
+        actions: "Действия"
+        new_badge: "Новый Бейдж"
+        back: "Назад"
+      badge:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      create: 
+        success: "Бейдж был успешно создан!"
+      update: 
+        success: "Бейдж был успешно обновлен!"
+      destroy: 
+        success: "Бейдж был успешно удален!"
 
   test_mailer:
     completed_test:

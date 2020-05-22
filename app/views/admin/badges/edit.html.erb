@@ -1,0 +1,16 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <h1 class="display-4 text-center"><%= t('.header', title: @badge.title) %></h1>
+
+    <div class="card border-success rounded mb-3 mt-4">
+      <div class="card-body">
+
+        <%= render "form" %>
+
+        <p>
+          <%= link_to t('.back'), admin_badge_path(@badge), class: 'btn btn-secondary btn-sm float-right' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

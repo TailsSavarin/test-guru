@@ -10,10 +10,14 @@ class TestPassagesController < ApplicationController
 
   def update
     @test_passage.accept!(params[:answer_ids])
-
+    
     if @test_passage.completed?
+      if @test_passage.success?
+        @test_passage.update_attributes(completed_successfully: true)
+        UserBadgeService.new(@test_passage).badges_unlock
+      end
       TestsMailer.completed_test(@test_passage).deliver_now
-      redirect_to result_test_passage_path(@test_passage)
+      redirect_to result_test_passage_path(@test_passage), notice: t('.badges')
     else
       render :show
     end

@@ -1,0 +1,28 @@
+<div class="row mt-3">
+  <div class="col col-md">
+    <h1 class="display-4 text-center"><%= t('.header') %></h1>
+    <table class="table table-hover text-center mt-3">
+      <thead>
+      <tr>
+        <th scope="col"><%= t('.title') %></th>
+        <th scope="col"><%= t('.image') %></th>
+        <th scope="col"><%= t('.rule') %></th>
+        <th scope="col"><%= t('.description') %></th>
+        <th scope="col" colspan="3"><%= t('.actions') %></th>
+      </tr>
+      </thead>
+
+      <tbody>
+        <%= render @badges %>
+      </tbody>
+    </table>
+
+    <p>
+      <%= link_to t('.new_badge'), new_admin_badge_path, class: 'btn btn-success btn-lg' %>
+    </p>
+
+    <p>
+      <%= link_to t('.back'), admin_tests_path, class: 'btn btn-secondary btn-block' %>
+    </p>
+  </div>
+</div>

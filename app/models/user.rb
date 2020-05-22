@@ -7,6 +7,8 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
   has_many :gists, dependent: :destroy
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
@@ -22,5 +24,9 @@ class User < ApplicationRecord
 
   def admin?
     is_a?(Admin)
+  end
+
+  def tests_passed(test_ids)
+    self.test_passages.completed_successfully.where(test_id: test_ids).map(&:test_id).uniq.sort
   end
 end

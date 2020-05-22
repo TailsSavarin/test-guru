@@ -14,6 +14,10 @@ en:
       answer:
         create: "Create Answer"
         update: "Update Answer"
+      badge:
+        create: "Create Badge"
+        update: "Update Badge"
+
     label:
       user:
         email: "Email"
@@ -30,10 +34,17 @@ en:
         correct: "Correct:"
       feedback: 
         body: "Feedback:"
+      badge:
+        title: "Title:"
+        image: "Image path"
+        rule: "Rule:"
+        description: "Description:"
+        value: "Value"
 
   feedbacks:
     create:
       thanks: "Thank you, for leaving feedback about us!"
+      try_again: "Something went wrong, please try again"
     new:
       header: "Write to us"
     form:
@@ -48,14 +59,15 @@ en:
       sign_up: "Sign up"
       login: "Login"
       login_time: "Last login time:"
-    footer:
       contact: "Contact Us"
+      my_badges: "Badges"
 
   devise:
     registrations:
       new:
         success_password: "Password match"
         failure_password: "Password didn't match"
+
     sessions: 
       create: 
         after_sign_in_greeting: "Hello, %{name}! Have a nice day!"
@@ -67,6 +79,9 @@ en:
       test_pass_fail: "Sorry, you did not pass the test!"
       percent: "The percentage of currect answers was:"
       back: "To the test list"  
+      success: "You have successfullyt completed the %{title} test. You are doing great, keep up the good work!"
+      failure: "You could not pass the %{title} test. Try again, you will succeed!"
+
     gist:
       success: "Gist was successfully created, link: %{link}"
       failure: "An error occurred while saving gist"
@@ -86,10 +101,35 @@ en:
       author: "Author"
       actions: "Actions"
       questions: "Questions"
+      status: "Status"
+      info: "Green - test passed.\nRed - test failed.\nDark - test has not passed yet."
     test: 
       start: "START"
     start:
       after_start_greeting: "Good Luck! Your test passage has begun!"
+
+  badges:
+    form:
+      button_info: "Details on selecting a condition parameter"
+      info: "You may choose:"
+      info1: "All category tests: Backend[0] ro Frontend[1]"
+      info2: "All level tests: Any number [0-100]"
+      rule: "Select rule"
+    index:
+      header: "Badge List"
+      title: "Title"
+      image: "Image"
+      description: "Description"
+      current_badges: "My Badges"
+      back: "Back"
+    current:
+      header: "My Badges"
+      title: "Title"
+      image: "Image"
+      description: "Description"
+      badge_list: "Badge List"
+      back: "Back"
+      no_badges: "You have no badges yet"
 
   admin:
     nav:
@@ -166,6 +206,7 @@ en:
         back: "Back"
       index:
         gists: "Gist List"
+        badges: "Badge List"
         header: "Test List"
         category: "Category"
         title: "Title"
@@ -177,7 +218,7 @@ en:
       form_inline:
         submit: "OK"
       new: 
-        header: "Create a new test:"
+        header: "New Test:"
         back: "Back"
       show:
         actions: "Actions"
@@ -201,6 +242,40 @@ en:
         success: "Test was successfully updated!"
       destroy: 
         success: "Test was successfully deleted!"
+    badges:
+      edit:
+        header: "Edit Badge"
+        back: "Back"
+      new:
+        header: "New Badge"
+        back: "Back"
+      show:
+        header: "Badge Information"
+        title: "Title:"
+        image: "Image:"
+        rule: "Rule:"
+        description: "Description"
+        edit: "Edit"
+        back: "Back"
+      index:
+        header: "Badge List"
+        title: "Title"
+        image: "Image"
+        rule: "Rule"
+        description: "Description"
+        actions: "Actions"
+        new_badge: "New Badge"
+      badge:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      create: 
+        success: "Badge was successfully created!"
+      update: 
+        success: "Badge was successfully updated!"
+      destroy: 
+        success: "Badge was successfully deleted!"
 
   test_mailer:
     completed_test:

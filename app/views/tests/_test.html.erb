@@ -4,5 +4,15 @@
   <td class="align-middle"><%= test_level(test) %></td>
   <td class="align-middle"><%= test.author.first_name %></td>
   <td class="align-middle"><%= questions_count(test) %></td>
+  <td class="align-middle">
+    <% if current_user.test_passage(test) %>
+      <% if current_user.test_passage(test).completed_successfully %>
+        <span class="badge badge-pill badge-success"><%= octicon 'primitive-dot-stroke' %></span>
+      <% else %>
+        <span class="badge badge-pill badge-danger"><%= octicon 'primitive-dot-stroke' %></span>
+      <% end %>
+    <% else %>
+      <span class="badge badge-pill badge-dark"><%= octicon 'primitive-dot-stroke' %></span>
+    <% end %>
   <td class="align-middle"><%= button_to t('.start'), start_test_path(test), class: 'btn btn-outline-primary' %></td>
 </tr>

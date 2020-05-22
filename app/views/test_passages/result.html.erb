@@ -2,16 +2,22 @@
   <div class="col col-md-10">
     <h1 class="display-4 text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
     <div class="card border-<%= color_border(@test_passage) %> rounded mb-3 mt-4">
-      <h2 class="text-center"><%= test_complete_message(@test_passage) %></h2> 
-      <div class="card-body text-center">
+      <h1 class="text-center mt-3"><%= test_complete_message(@test_passage) %></h1> 
+      <div class="card-body">
         <% if @test_passage.success? %>
-          <h3 class='success-color'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</h3>
+          <div class="alert alert-success" role="alert">
+            <h3 class="alert-heading"><%= t('.success', title: @test_passage.test.title) %></h3>
+            <p class="mb-0"><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</p>
+          </div>
         <% else %>
-          <h3 class='fail-color'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</h3>
+          <div class="alert alert-danger" role="alert">
+            <h3 class="alert-heading"><%= t('.failure', title: @test_passage.test.title) %></h3>
+            <p class='mb-0'><%= t('.percent') %> <%= @test_passage.success_percent.to_i %>%</p>
+          </div>
         <% end %>
-        
+
         <p>
-          <%= link_to t('.back'), tests_path, class: 'btn btn-danger mt-3' %>
+          <%= link_to t('.back'), tests_path, class: 'btn btn-primary btn-block mt-4' %>
         </p>
       </div>
     </div>
