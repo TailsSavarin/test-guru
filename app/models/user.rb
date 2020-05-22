@@ -26,8 +26,7 @@ class User < ApplicationRecord
     is_a?(Admin)
   end
 
-  def tests_passed?(test_ids)
-    test_passed_ids = test_passages.completed_successfully.where(test_id: test_ids).map(&:test_id)
-    test_ids.uniq.sort == passed_test_ids.uniq.sort
+  def tests_passed(test_ids)
+    self.test_passages.completed_successfully.where(test_id: test_ids).map(&:test_id).uniq.sort
   end
 end

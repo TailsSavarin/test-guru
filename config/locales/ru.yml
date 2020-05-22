@@ -44,6 +44,7 @@ ru:
   feedbacks:
     create:
       thanks: "Спасибо, что оставили отзыв о нас!"
+      try_again: "Что-то пошло не так, попробуйте еще раз"
     new: 
       header: "Напишите Нам"
     form:
@@ -103,10 +104,8 @@ ru:
       questions: "Вопросы"
       actions: "Действия"
       status: "Статус"
+      info: "Зеленый - тест пройден.\nКрасный - тест не пройден.\nТемный - тест еще не проходился."
     test: 
-      completed_successfully: "Пройден успешно"
-      completed_unsuccessfully: "Пройден неудачно"
-      not_passed_yet: "Не пройден"
       start: "НАЧАТЬ"
     start:
       after_start_greeting: "Удачи! Вы начали проходить тест!"
@@ -241,9 +240,8 @@ ru:
         success: "Тест был успешно удален!"
     badges:
       form:
-        info: "Инофрмация о выборе параметра условия"
-        info1: "Для категорий: Backend - 0 или Frontend - 1"
-        info2: "Для уровней: 0 - 100"
+        info_button: "Инофрмация о выборе параметра условия"
+        info: "Для категорий: Backend - 1 или Frontend - 2\nДля уровней: 0 - 100"
         rule: "Выберите правило"
       edit:
         header: "Изменить Бейдж"

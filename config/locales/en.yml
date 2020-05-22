@@ -44,6 +44,7 @@ en:
   feedbacks:
     create:
       thanks: "Thank you, for leaving feedback about us!"
+      try_again: "Something went wrong, please try again"
     new:
       header: "Write to us"
     form:
@@ -101,11 +102,9 @@ en:
       actions: "Actions"
       questions: "Questions"
       status: "Status"
+      info: "Green - test passed.\nRed - test failed.\nDark - test has not passed yet."
     test: 
       start: "START"
-      completed_successfully: "Completed"
-      completed_unsuccessfully: "Failed"
-      not_passed_yet: "Not passed"
     start:
       after_start_greeting: "Good Luck! Your test passage has begun!"
 
