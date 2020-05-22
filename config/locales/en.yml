@@ -27,6 +27,7 @@ en:
         category_id: "Category:"
         title: "Title:"
         level: "Level:"
+        timer: "Timer:"
       question:
         body: "Body:"
       answer: 
@@ -91,6 +92,7 @@ en:
       question_numbers: "Questions number %{first} from %{second}" 
       next: "Next"
       gist_question: "Add question in your Gist"
+      loading: "Loading TestGuru Timer..."
 
   tests:
     index:
@@ -102,6 +104,7 @@ en:
       actions: "Actions"
       questions: "Questions"
       status: "Status"
+      timer: "Timer (min)"
       info: "Green - test passed.\nRed - test failed.\nDark - test has not passed yet."
     test: 
       start: "START"
@@ -215,6 +218,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         new_test: "New Test"
+        timer: "Timer (sec)"
       form_inline:
         submit: "OK"
       new: 
@@ -228,6 +232,7 @@ en:
         level: "Level:"
         author: "Author:"
         questions: "Questions:"
+        timer: "Timer (sec):"
         edit: "Edit"
         new_question: "New Question"
         back: "Back"
