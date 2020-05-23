@@ -4,6 +4,7 @@
   <td class="align-middle"><%= test_level(test) %></td>
   <td class="align-middle"><%= test.author.first_name %></td>
   <td class="align-middle"><%= questions_count(test) %></td>
+  <td class="align-middle"><%= test_timer(test) %></td>
   <td class="align-middle">
     <% if current_user.test_passage(test) %>
       <% if current_user.test_passage(test).completed_successfully %>

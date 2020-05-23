@@ -3,6 +3,14 @@
     <h1 class="display-4 text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
 
     <div class="card border-info rounded mb-3 mt-4">
+      <div class="alert alert-info text-center">
+        <% if @test_passage.test.timer_value_positive? %>
+          <h3><%= content_tag :test_timer, t('.loading'),
+                              class: 'timer',
+                              data: { time: @test_passage.time_left,
+                                      test_passage_id: @test_passage.id } %></h3>
+        <% end %>
+      </div>
       <div class="card-body">
         <p class="text-center">
         <%= t('.question_numbers', first: @test_passage.current_question_number,

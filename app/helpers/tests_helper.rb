@@ -9,4 +9,8 @@ module TestsHelper
   def test_level(test)
     TEST_LEVELS[test.level] || :hero
   end
+
+  def test_timer(test)
+    test.timer.to_f/60
+  end
 end

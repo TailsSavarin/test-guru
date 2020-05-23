@@ -11,7 +11,11 @@ class TestPassage < ApplicationRecord
   scope :completed_successfully, -> { where(completed_successfully: true) }
 
   def completed?
-    current_question.nil?
+    current_question.nil? 
+  end
+
+  def timeout?
+    Time.zone.now > completion_time
   end
 
   def success_percent
@@ -29,6 +33,14 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
+  end
+
+  def completion_time
+    self.created_at + self.test.timer.seconds
+  end
+
+  def time_left
+    (completion_time - Time.zone.now).to_i
   end
   
   private

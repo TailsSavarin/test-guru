@@ -17,6 +17,11 @@
       <%= f.number_field :level, id: :test_level, in: 0..Float::INFINITY, class: 'form-control' %>
     </p>
 
+    <p>
+      <%= f.label :timer %>
+      <%= f.number_field :timer, in: 0..Float::INFINITY, step: 30, class: 'form-control' %>
+    </p>
+
     <%= f.submit class: 'btn btn-success btn-lg mt-2' %>
   </div>
 <% end %>
