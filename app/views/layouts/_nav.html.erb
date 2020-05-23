@@ -11,11 +11,11 @@
     <% if user_signed_in? %>
       <%= octicon 'clock' %>
       <%= t('.login_time') %>
-      <%= current_time %> |
-      <%= octicon 'person' %>
-      <%= t('.profile', email: current_user.email) %>
+      <%= current_time %>
       <%= link_to t('.my_badges'), current_badges_path, class: 'btn btn-outline-info' %>
       <%= link_to t('.contact'), new_feedback_path, class: 'btn btn-outline-primary' %>
+      <%= octicon 'person' %>
+      <%= t('.profile', email: current_user.email) %>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger' %>
     <% else %>
       <%= link_to t('.login'), new_user_session_path, class: 'btn btn-outline-primary' %>

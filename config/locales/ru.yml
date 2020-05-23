@@ -60,7 +60,7 @@ ru:
       sign_up: "Зарегистрироваться"
       login: "Войти"
       login_time: "Последнее время входа:"
-      contact: "Свяжитесь с нами"
+      contact: "Напишите нам"
       my_badges: "Бейджи"
 
   devise:
