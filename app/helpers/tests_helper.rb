@@ -1,6 +1,10 @@
 module TestsHelper
-
-  TEST_LEVELS = { 0 => :easy, 1 => :elementary, 2 => :advanced, 3 => :hard }.freeze
+  TEST_LEVELS = { 
+    0 => :easy,
+    1 => :elementary,
+    2 => :advanced,
+    3 => :hard
+  }.freeze
 
   def questions_count(test)
     test.questions.count
@@ -11,6 +15,6 @@ module TestsHelper
   end
 
   def test_timer(test)
-    test.timer.to_f/60
+    test.timer.to_f / 60
   end
 end
