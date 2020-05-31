@@ -2,20 +2,18 @@ class Admin::QuestionsController < Admin::BaseController
   before_action :set_test, only: %i[index new create]
   before_action :set_question, only: %i[show edit update destroy]
 
-  def show  
-  end
+  def show; end
 
   def new
     @question = @test.questions.new
   end
-  
-  def edit
-  end
+
+  def edit; end
 
   def create
     @question = @test.questions.new(question_params)
-    if @question.save 
-      redirect_to admin_question_path(@question), notice: t('.success')  
+    if @question.save
+      redirect_to admin_question_path(@question), notice: t('.success')
     else
       render :new
     end
@@ -23,7 +21,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      redirect_to admin_question_path@question, notice: t('.success') 
+      redirect_to admin_question_path @question, notice: t('.success')
     else
       render :edit
     end
@@ -31,7 +29,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def destroy
     @question.destroy
-    redirect_to admin_test_path(@question.test), notice: t('.success') 
+    redirect_to admin_test_path(@question.test), notice: t('.success')
   end
 
   private

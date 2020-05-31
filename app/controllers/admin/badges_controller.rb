@@ -5,8 +5,7 @@ class Admin::BadgesController < Admin::BaseController
     @badges = Badge.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @badge = Badge.new

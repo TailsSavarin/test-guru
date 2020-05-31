@@ -2,15 +2,13 @@ class TestPassagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_test_passage, only: %i[show result update gist]
 
-  def show
-  end
+  def show; end
 
-  def reult
-  end
+  def reult; end
 
   def update
     @test_passage.accept!(params[:answer_ids])
-    
+
     if @test_passage.completed? || @test_passage.timeout?
       if @test_passage.success?
         @test_passage.update_attributes(completed_successfully: true)
