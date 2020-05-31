@@ -11,7 +11,7 @@ class TestPassage < ApplicationRecord
   scope :completed_successfully, -> { where(completed_successfully: true) }
 
   def completed?
-    current_question.nil? 
+    current_question.nil?
   end
 
   def timeout?
@@ -19,7 +19,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success_percent
-    correct_questions.to_f/test.questions.size * 100
+    correct_questions.to_f / test.questions.size * 100
   end
 
   def success?
@@ -36,13 +36,13 @@ class TestPassage < ApplicationRecord
   end
 
   def completion_time
-    self.created_at + self.test.timer.seconds
+    created_at + self.test.timer.seconds
   end
 
   def time_left
     (completion_time - Time.zone.now).to_i
   end
-  
+
   private
 
   def before_validation_set_first_question
@@ -55,7 +55,7 @@ class TestPassage < ApplicationRecord
 
   def correct_answer?(answer_ids)
     answer_ids ||= []
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort 
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
 
   def correct_answers

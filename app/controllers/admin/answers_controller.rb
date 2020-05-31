@@ -2,21 +2,19 @@ class Admin::AnswersController < Admin::BaseController
   before_action :set_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
 
-  def show
-  end
+  def show; end
 
   def new
     @answer = @question.answers.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @answer = @question.answers.new(answer_params)
 
     if @answer.save
-      redirect_to admin_answer_path(@answer), notice: t('.success') 
+      redirect_to admin_answer_path(@answer), notice: t('.success')
     else
       render :new
     end
@@ -24,7 +22,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      redirect_to admin_answer_path(@answer), notice: t('.success') 
+      redirect_to admin_answer_path(@answer), notice: t('.success')
     else
       render :edit
     end
@@ -32,7 +30,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def destroy
     @answer.destroy
-    redirect_to admin_question_path(@answer.question), notice: t('.success') 
+    redirect_to admin_question_path(@answer.question), notice: t('.success')
   end
 
   private

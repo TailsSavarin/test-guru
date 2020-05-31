@@ -26,7 +26,7 @@ class UserBadgeService
 
   def all_tests_by_level_award?(level)
     return if level != @test.level
-  
+
     test_ids = Test.with_questions.where(level: level).pluck(:id)
     test_ids.uniq.sort == @user.tests_passed(test_ids)
   end

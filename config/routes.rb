@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-
   root 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
-  resources :tests, only: :index  do 
-    member do 
+  resources :tests, only: :index do
+    member do
       post :start
     end
   end
 
-  resources :test_passages, only: %i[show update] do 
+  resources :test_passages, only: %i[show update] do
     member do
       get :result
       post :gist
@@ -34,5 +33,4 @@ Rails.application.routes.draw do
   resources :badges, only: %i[index] do
     get :current, on: :collection
   end
-
 end
