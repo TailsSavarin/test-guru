@@ -5,12 +5,12 @@
 
 __The project designed to create and various tests.__
 
-#####Main technical parameters:
+##### Main technical parameters:
 1. Ruby version - ***2.7.0***
 2. Rails version - ***6.0.2.1***
 3. Database - ***PostgreSQL***
 
-#####Also implemented in the project:
+##### Also implemented in the project:
 * Main models:
     * User model
     * Admin model
@@ -36,13 +36,15 @@ __The project designed to create and various tests.__
 * Supported Languges
     * RU
     * ENG
-####Main functionality
+
+#### Main functionality
 **Passing tests**
 **Timer and progress bar set during the test**
 **An unknown question can be added to your GitGist, made with GitHub API**
 **Possible to leave feedback**
 
 *The project was created for educational purposes only!*
+
 Under the direciton of [Thinknetica](https://thinknetica.com/)
 
 _Creation date:_
