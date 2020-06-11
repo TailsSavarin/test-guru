@@ -7,7 +7,7 @@ __The project designed to create and various tests.__
 
 ##### Main technical parameters:
 1. Ruby version - ***2.7.0***
-2. Rails version - ***6.0.2.1***
+2. Rails version - ***6.0.2***
 3. Database - ***PostgreSQL***
 
 ##### Also implemented in the project:
@@ -39,9 +39,16 @@ __The project designed to create and various tests.__
 
 #### Main functionality
 **Passing tests**
+
 **Timer and progress bar set during the test**
+
 **An unknown question can be added to your GitGist, made with GitHub API**
-**Possible to leave feedback**
+
+![GistPic](http://prntscr.com/sy6cpo)
+
+**Possible to leave a feedback**
+
+**Email notifictaiton with results is being sent, after passing the test**
 
 *The project was created for educational purposes only!*
 
