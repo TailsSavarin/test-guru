@@ -44,7 +44,7 @@ __The project designed to create and various tests.__
 
 **An unknown question can be added to your GitGist, made with GitHub API**
 
-![GistPic](http://prntscr.com/sy6cpo)
+![GistPic](app/assets/images/gist.png)
 
 **Possible to leave a feedback**
 
