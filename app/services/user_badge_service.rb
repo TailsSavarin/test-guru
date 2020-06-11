@@ -1,3 +1,5 @@
+require 'rouge'
+
 class UserBadgeService
   def initialize(test_passage)
     @test_passage = test_passage
