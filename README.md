@@ -22,7 +22,7 @@ __The project designed to create and various tests.__
     * Badges
 * Visual component
     * Bootstrap
-* JS prat
+* JS part
     * Progress bar for tests
     * Password confirmation for authorization
     * Timer for tests 
