@@ -1,4 +1,4 @@
-# :bulb::books: Project TestGuru
+# :bulb::books: Project Test Guru
 ---
 ### Educational project from a programming school
 ###### by Alexandr Babitsky
