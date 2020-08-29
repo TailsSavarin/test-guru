@@ -37,18 +37,18 @@ __The project designed to create and various tests.__
     * RU
     * ENG
 
-#### Main functionality
-**Passing tests**
+#### Main functionality:
+* **Passing tests**
 
-**Timer and progress bar set during the test**
+* **Timer and progress bar set during the test**
 
-**An unknown question can be added to your GitGist, made with GitHub API**
+* **An unknown question can be added to your GitGist, made with GitHub API**
 
-![GistPic](app/assets/images/gist.png)
+   ![GistPic](app/assets/images/gist.png)
 
-**Possible to leave a feedback**
+* **Possible to leave a feedback**
 
-**Email notifictaiton with results is being sent, after passing the test**
+* **Email notifictaiton with results is being sent, after passing the test**
 
 *The project was created for educational purposes only!*
 
